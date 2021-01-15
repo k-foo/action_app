@@ -1,0 +1,47 @@
+.footer {
+  width: 100vw;
+  background-color: #FFF;
+  color: #333333;
+  text-align: center;
+  height: 120px;
+  padding: 2vh 0;
+  position: absolute;/*絶対位置*/
+  bottom: 0; /*下に固定*/
+}
+
+.footer-content-head {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* .description {
+  list-style: none;
+  overflow: hidden;
+} */
+
+
+/* .footer-link {
+  width: 200px;
+  text-align: center;
+  background-color: aqua;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 2px;
+}  */
+
+.logo-white {
+  width: 20vh;
+  vertical-align: bottom;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: center;
+}
+
+.footer > p {
+  font-size: 14px;
+}
+/*# sourceMappingURL=footer.css.map */
