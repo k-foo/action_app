@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   with_options presence: true do
-    validates :nickname, uniqueness: true, length: { maximum: 8 }
+    validates :nickname, uniqueness: true, length: { maximum: 15 }
     validates :birthdate
     # @含むこと・存在することはdeviseのデフォルト実装のため省略
     validates :email, uniqueness: true
