@@ -1,12 +1,13 @@
 body {
   background-color: #F0EBEB;
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic', sans-serif ;
 }
 
 .wrapper{
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 200px;
   /*←footerの高さ*/
   box-sizing: border-box;
   /*←全て含めてmin-height:100vhに*/
