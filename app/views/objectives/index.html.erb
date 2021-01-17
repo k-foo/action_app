@@ -1,2 +1,26 @@
-<h1>Objectives#index</h1>
-<p>Find me in app/views/objectives/index.html.erb</p>
+<div class="contents row">
+<%= link_to '投稿する', new_objective_path, class: "login" %>
+  <% @objectives.each do |objective| %>
+    <div class="content_post" style="background-image: url(<%= asset_path('note.png') %>);"%>
+      <div class="more">
+        <span><%= image_tag 'menu.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to '詳細', objective_path(objective.id), method: :get %>
+          </li>
+          <li>
+            <%= link_to '編集', edit_objective_path(objective.id), method: :get %>
+          </li>
+          <li>
+            <%= link_to '削除', objective_path(objective.id), method: :delete %>
+          </li>
+        </ul>
+      </div> 
+      <p><%= objective.title %></p>
+      <p><%= objective.category_id %></p>
+      <span class="name">
+        <%= objective.created_at %>
+      </span>
+    </div>
+  <% end %>
+</div>
