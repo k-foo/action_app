@@ -1,0 +1,16 @@
+<div class="contents row">
+  <div class="container">
+    <h3>投稿する</h3>
+    <%= form_with(model: @objective, local: true) do |f| %>
+    <%# インスタンスを渡して、エラー発生時にメッセージを表示 %>
+    <%= render 'shared/error_messages', model: f.object %>
+      <%= f.text_area :title, placeholder: "タイトル" %>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      <%= f.text_area :wish, placeholder: "（願望）簡単すぎず、難しすぎもしない。しかし重要であることを書く。", rows: "10" %>
+      <%= f.text_area :outcome, placeholder: "（結果）それが叶った時の最高の結果を書く。", rows: "10" %>
+      <%= f.text_area :obstacle, placeholder: "（障害）願望を叶えるために障害になりうることを書く。", rows: "10" %>
+      <%= f.text_area :plan, placeholder: "（計画）上記、障害に対処する方法や回避する方法を書く。", rows: "10" %>
+      <%= f.submit "SEND" %>
+    <% end %>
+  </div>
+</div>
