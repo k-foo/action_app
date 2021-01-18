@@ -140,3 +140,13 @@
 .indispensable{
   color: rgba(255, 0, 0, 0.652);
 }
+
+/* パスワードを15文字以上打つとマークが鮮明になるよう実装 */
+.password-logo{
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+    filter: blur(20px);
+    z-index: -1;
+}
