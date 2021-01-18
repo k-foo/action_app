@@ -30,6 +30,7 @@
     <div class='form-text-wrap'>
       <label class="form-text">パスワード</label>
       <span class="indispensable">必須</span>
+    <%= image_tag "passcheck.png",id:"pass-logo", :size =>'40x40' %>
     </div>
     <%# passwordとpassword_confirmationが一致しているか確認後、暗号化してコントローラーに渡す(encrypted_password) %>
     <%= f.password_field :password, class:"input-default", id:"password", placeholder:"15文字以上の半角英数字", autocomplete: 'off' %>
