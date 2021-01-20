@@ -1,2 +1,0 @@
-class Worry < ApplicationRecord
-end
