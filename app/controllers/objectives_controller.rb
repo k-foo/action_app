@@ -3,7 +3,7 @@ class ObjectivesController < ApplicationController
   before_action :set_objective, only: [:edit, :show]
 
   def index
-    @objectives = Objective.includes(:user).order('created_at DESC')
+    @objectives = current_user.objectives.all.order(created_at: :desc)
   end
 
   def new
