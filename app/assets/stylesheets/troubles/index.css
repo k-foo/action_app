@@ -1,0 +1,65 @@
+.contents {
+  padding: 32px;
+  margin: 0;
+  background: skyblue;
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.messages li {
+  display: flex;
+}
+
+.messages li + li {
+  margin-top: 32px;
+}
+
+li.right-side {
+  flex-direction: row-reverse;
+}
+
+.pic {
+  /* background: pink; */
+  width: 80px;
+  text-align: center;
+}
+
+.pic img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.text,.trouble {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 24px;
+  max-width: 60%;
+  line-height: 1.8;
+  position: relative;
+}
+
+.text::before {
+  content: '';
+  width: 0;
+  height: 0;
+  /* border: 8px solid #fff; */
+  border: 8px solid transparent;
+  position: absolute;
+}
+
+.left-side .text::before {
+  top: 12px;
+  left: -16px;
+  border-right-color: #fff;
+}
+
+.right-side .text::before {
+  top: 12px;
+  right: -16px;
+  border-left-color: #fff;
+}
