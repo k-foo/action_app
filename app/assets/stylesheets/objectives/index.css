@@ -1057,3 +1057,13 @@ footer p {
 .search-form .search-btn {
   width: 10%;
 }
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 200px;
+  /*←footerの高さ*/
+  box-sizing: border-box;
+  /*←全て含めてmin-height:100vhに*/
+}
