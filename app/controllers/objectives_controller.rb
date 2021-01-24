@@ -3,8 +3,7 @@ class ObjectivesController < ApplicationController
   before_action :set_objective, only: [:edit, :show]
 
   def index
-    # @objectives = Objective.all
-    @objectives = Objective.includes(:user).order('created_at DESC')
+    @objectives = current_user.objectives.all.order(created_at: :desc)
   end
 
   def new
@@ -12,7 +11,6 @@ class ObjectivesController < ApplicationController
   end
 
   def create
-    # Objective.create(objective_params)
     @objective = Objective.new(objective_params)
     if @objective.save
       redirect_to objectives_path

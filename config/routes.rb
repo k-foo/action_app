@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'homes#index'
   get 'homes/index'
   resources :objectives
+  resources :troubles
 end

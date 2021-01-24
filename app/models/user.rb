@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :objectives
+  has_many :troubles
 
   with_options presence: true do
     validates :nickname, uniqueness: true, length: { maximum: 15 }

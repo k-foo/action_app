@@ -1,0 +1,78 @@
+.container-chat {
+  margin: 350px;
+  background-color: #482E2E;
+  padding: 50px;
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.message-left-side {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.message-right-side {
+  flex-direction: row-reverse;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.pic-chat {
+  width: 120px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.pic-chat img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.text-chat {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 24px;
+  max-width: 60%;
+  line-height: 1.8;
+  position: relative;
+}
+
+.text-chat::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 14px solid transparent;
+  position: absolute;
+}
+
+.message-left-side .text-chat::before {
+  top: 18px;
+  left: -28px;
+  border-right-color: #fff;
+}
+
+.message-right-side .text-chat::before {
+  top: 18px;
+  right: -28px;
+  border-left-color: #fff;
+}
+
+/* ここまで成功 */
+
+.form-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-chat {
+  width: 40%;
+}
