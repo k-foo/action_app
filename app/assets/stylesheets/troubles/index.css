@@ -1,5 +1,5 @@
 .container-chat {
-  margin: 350px;
+  margin: 32px 200px;
   background-color: #482E2E;
   padding: 50px;
 }
@@ -66,8 +66,6 @@
   border-left-color: #fff;
 }
 
-/* ここまで成功 */
-
 .form-area {
   display: flex;
   justify-content: space-around;
@@ -75,4 +73,14 @@
 
 .form-chat {
   width: 40%;
+}
+
+.wrapper{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 200px;
+  /*←footerの高さ*/
+  box-sizing: border-box;
+  /*←全て含めてmin-height:100vhに*/
 }

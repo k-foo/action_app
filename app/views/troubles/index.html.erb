@@ -1,3 +1,5 @@
+<div class="wrapper">
+<%= render "shared/login_after_header" %>
 <main class="container-chat">
   <div class="form-area">
     <div class="form-chat">
@@ -15,15 +17,15 @@
   </div>
 
   <div id="list_messages">
-    <%# <ul class="messages"> %>
-      <%# <li class="message-right-side"> %>
-        <%# <div class="pic-chat"> %>
-        <%# <img src="/assets/kind.png" alt="落ち込んでいる画像"> %>
-        <%# </div> %>
-        <%# <div class="text-chat"> %>
-        <%# </div> %>
-      <%# </li>  %>
-    <%# </ul> %>
+    <ul class="messages">
+      <li class="message-right-side">
+        <div class="pic-chat">
+        <img src="/assets/kind.png" alt="励ましている画像">
+        </div>
+        <div class="text-chat">
+        </div>
+      </li> 
+    </ul>
   </div>
 
   <% @troubles.each do |trouble| %>
@@ -41,5 +43,6 @@
         </div>
       </li>
   <% end %>
-
 </main>
+<%= render "shared/login_after_footer" %>
+</div>
