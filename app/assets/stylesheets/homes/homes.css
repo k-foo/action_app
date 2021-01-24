@@ -1,6 +1,7 @@
 body {
   background-color: #F0EBEB;
-  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic', sans-serif ;
+  background-repeat: repeat;
+  /* background-image:url("images/background.png"); */
 }
 
 .wrapper{
