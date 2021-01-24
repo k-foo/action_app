@@ -1,21 +1,38 @@
-  <main class="container-chat">
-    <div class="message-left-side">
-      <div class="pic-chat">
-      <%= image_tag 'sad.png' ,class:"pic" %>
-      </div>
-      <div class="text-chat">
-      <%= render "trouble" %>
-      </div>
-    </div>
-    <div class="message-right-side">
-      <div class="pic-chat">
-      <%= image_tag 'kind.png' ,class:"pic" %>
-      </div>
-      <div class="text-chat">
-      <%# ここには励ましをレンダー%>
-      <%= render @troubles %>
-      </div>
-    </div>
+<main class="container-chat">
+  <% @troubles.each do |trouble| %>
+    <li class="message-left-side">
+        <div class="pic-chat">
+        <img src="/assets/sad.png" alt="落ち込んでいる画像">
+        </div>
+        <div class="text-chat">
+          <div class="post-date">
+          投稿日時：<%= trouble.created_at %>
+          </div>
+          <div class="post-content">
+          <%= trouble.worry %>
+          </div>
+        </div>
+      </li>
+  <% end %>
+
+  <div id="list">
+    <ul class="messages">
+      <li class="message-left-side">
+        <div class="pic-chat">
+        <img src="/assets/sad.png" alt="落ち込んでいる画像">
+        </div>
+        <div class="text-chat">
+        <%# <%= render "trouble" %>
+        </div>
+      </li>
+      <li class="message-right-side">
+        <div class="pic-chat">
+        <img src="/assets/kind.png" alt="落ち込んでいる画像">
+        </div>
+        <div class="text-chat">
+        </div>
+      </li> 
+    </ul>
   </div>
 
   <div class="form-area">
