@@ -1,6 +1,7 @@
+<%= render "shared/login_after_header" %>
 <div class="contents row">
   <div class="container">
-    <h3>投稿する</h3>
+    <h3>目標作成する(WOOPの法則)</h3>
     <%= form_with(model: @objective, local: true) do |f| %>
     <%# インスタンスを渡して、エラー発生時にメッセージを表示 %>
     <%= render 'shared/error_messages', model: f.object %>

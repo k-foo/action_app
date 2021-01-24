@@ -1,49 +1,37 @@
-<div class="contents row">
-  <div class="container">
-  <div class="content_post">
-    <div class="more">
-      <span><%= image_tag 'menu.png' %></span>
-      <ul class="more_list">
-        <li>
-        <%= link_to '編集', edit_objective_path(@objective.id), method: :get %>
-        </li>
-        <li>
-          <%= link_to '削除', objective_path(@objective.id), method: :delete %>
-        </li>
-      </ul>
-    </div>
-  <div class="objective-explain-box">
-      <span><%= @objective.title %></span>
-    </div>
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-objective">作成日</th>
-          <td class="detail-value"><%= @objective.created_at %></td>
-        </tr>
-        <tr>
-          <th class="detail-objective">カテゴリー</th>
-          <td class="detail-value"><%= @objective.category.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-objective">願望（簡単すぎず難しすぎもしない。しかし重要であること。）</th>
-          <td class="detail-value"><%= @objective.wish %></td>
-        </tr>
-        <tr>
-          <th class="detail-objective">結果（願望が叶った時の最高の結果による感情・状況・メリット）</th>
-          <td class="detail-value"><%= @objective.outcome %></td>
-        </tr>
-        <tr>
-          <th class="detail-objective">障害（願望を叶えるために起こりうる障害）</th>
-          <td class="detail-value"><%= @objective.obstacle %></td>
-        </tr>
-        <tr>
-          <th class="detail-objective">計画（障害に対する対処方法・回避方法）</th>
-          <td class="detail-value"><%= @objective.plan%></td>
-        </tr>
-      </tbody>
-    </table>
+  <%= render "shared/login_after_header" %>
+  <div class="contents row">
+      <div class="content_post" style="background-image: url(<%= asset_path('note.png') %>);"%>
+        <div class="more">
+          <span><%= image_tag 'pin.png' %></span>
+          <ul class="more_list">
+            <li>
+              <%= link_to '編集', edit_objective_path(@objective.id), method: :get %>
+            </li>
+            <li>
+              <%= link_to '削除', objective_path(@objective.id), method: :delete %>
+            </li>
+          </ul>
+        </div>
+        <div class="objective-explain-box">
+          <ul>
+              <li><%= @objective.created_at.strftime('%Y/%m/%d') %>【<%= @objective.category.name %>】</li>
+              <br><br>
+              <li><b><%= @objective.title %></b></li>
+              <br><br>
+              <li>【願望（簡単すぎず難しすぎもしない。しかし重要であること。）】<br><%= @objective.wish %></li>
+              <br><br>
+              <li>【結果（願望が叶った時の最高の結果による感情・状況・メリット）】<br><%= @objective.outcome %></li>
+              <br><br>
+              <li>【障害（願望を叶えるために起こりうる障害）】<br><%= @objective.obstacle %></li>
+              <br><br>
+              <li>【計画（障害に対する対処方法・回避方法）】<br><%= @objective.plan%></li>
+              <br><br>
+          </ul>
+        </div>
+      </div>
+  </div>
+  <div class="contents row">
+  <div class="success">
+    <%= link_to '目標一覧へ戻る', objectives_path, class: "btn" %>
   </div>
   </div>
-</div>
-    <%= link_to '投稿一覧へ戻る', objectives_path, class: "btn" %>
