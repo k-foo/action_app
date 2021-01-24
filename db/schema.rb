@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_20_133115) do
+ActiveRecord::Schema.define(version: 2021_01_24_223504) do
+
+  create_table "encouragements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "trouble_id", null: false
+    t.text "encouragement"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["trouble_id"], name: "index_encouragements_on_trouble_id"
+    t.index ["user_id"], name: "index_encouragements_on_user_id"
+  end
 
   create_table "objectives", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -47,6 +57,8 @@ ActiveRecord::Schema.define(version: 2021_01_20_133115) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "encouragements", "troubles"
+  add_foreign_key "encouragements", "users"
   add_foreign_key "objectives", "users"
   add_foreign_key "troubles", "users"
 end
