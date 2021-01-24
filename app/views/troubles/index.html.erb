@@ -1,45 +1,9 @@
 <main class="container-chat">
-  <% @troubles.each do |trouble| %>
-    <li class="message-left-side">
-        <div class="pic-chat">
-        <img src="/assets/sad.png" alt="落ち込んでいる画像">
-        </div>
-        <div class="text-chat">
-          <div class="post-date">
-          投稿日時：<%= trouble.created_at %>
-          </div>
-          <div class="post-content">
-          <%= trouble.worry %>
-          </div>
-        </div>
-      </li>
-  <% end %>
-
-  <div id="list">
-    <ul class="messages">
-      <li class="message-left-side">
-        <div class="pic-chat">
-        <img src="/assets/sad.png" alt="落ち込んでいる画像">
-        </div>
-        <div class="text-chat">
-        <%# <%= render "trouble" %>
-        </div>
-      </li>
-      <li class="message-right-side">
-        <div class="pic-chat">
-        <img src="/assets/kind.png" alt="落ち込んでいる画像">
-        </div>
-        <div class="text-chat">
-        </div>
-      </li> 
-    </ul>
-  </div>
-
   <div class="form-area">
     <div class="form-chat">
-      <%= form_with(model: @trouble,id: "new_article") do |f| %>
-        <%= f.text_field :worry, class: "article_form", id: "article_text", placeholder: "悩みをつぶやこう" %>
-        <%= f.submit "POST" , id: "submit_btn"%>
+      <%= form_with(model: @trouble,id: "form_worry") do |f| %>
+        <%= f.text_field :worry, id: "content_worry", placeholder: "悩みをつぶやこう" %>
+        <%= f.submit "POST" , id: "submit_worry"%>
       <% end %>
     </div>
     <div class="form-chat">
@@ -49,4 +13,33 @@
       <% end %>
     </div>
   </div>
+
+  <div id="list_messages">
+    <%# <ul class="messages"> %>
+      <%# <li class="message-right-side"> %>
+        <%# <div class="pic-chat"> %>
+        <%# <img src="/assets/kind.png" alt="落ち込んでいる画像"> %>
+        <%# </div> %>
+        <%# <div class="text-chat"> %>
+        <%# </div> %>
+      <%# </li>  %>
+    <%# </ul> %>
+  </div>
+
+  <% @troubles.each do |trouble| %>
+    <li class="message-left-side">
+        <div class="pic-chat">
+        <img src="/assets/sad.png" alt="落ち込んでいる画像">
+        </div>
+        <div class="text-chat">
+          <div class="post-content">
+          <%= trouble.worry %>
+          </div>
+          <div class="post-date">
+          投稿日時：<%= trouble.created_at %>
+          </div>
+        </div>
+      </li>
+  <% end %>
+
 </main>
