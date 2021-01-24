@@ -1,40 +1,37 @@
-.contents {
-  padding: 32px;
-  margin: 0;
-  background: skyblue;
+.container-chat {
+  margin: 350px;
+  background-color: #482E2E;
+  padding: 50px;
 }
 
-.messages {
+.message-left-side {
   margin: 0;
   padding: 0;
-  list-style: none;
-}
-
-.messages li {
   display: flex;
+  margin-bottom: 32px;
 }
 
-.messages li + li {
-  margin-top: 32px;
-}
-
-li.right-side {
+.message-right-side {
   flex-direction: row-reverse;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 32px;
 }
 
-.pic {
-  /* background: pink; */
-  width: 80px;
+.pic-chat {
+  width: 120px;
   text-align: center;
+  padding-top: 8px;
 }
 
-.pic img {
-  width: 48px;
-  height: 48px;
+.pic-chat img {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
-.text,.trouble {
+.text-chat {
   background: #fff;
   border-radius: 8px;
   padding: 16px 24px;
@@ -43,23 +40,33 @@ li.right-side {
   position: relative;
 }
 
-.text::before {
+.text-chat::before {
   content: '';
   width: 0;
   height: 0;
-  /* border: 8px solid #fff; */
-  border: 8px solid transparent;
+  border: 14px solid transparent;
   position: absolute;
 }
 
-.left-side .text::before {
-  top: 12px;
-  left: -16px;
+.message-left-side .text-chat::before {
+  top: 18px;
+  left: -28px;
   border-right-color: #fff;
 }
 
-.right-side .text::before {
-  top: 12px;
-  right: -16px;
+.message-right-side .text-chat::before {
+  top: 18px;
+  right: -28px;
   border-left-color: #fff;
+}
+
+/* ここまで成功 */
+
+.form-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-chat {
+  width: 40%;
 }

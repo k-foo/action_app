@@ -1,34 +1,35 @@
-  <div class="contents" id="contents_area">
-    <ul class="messages">
-  <div id="new_article">
-      <li class="left-side">
-        <div class="pic">
-          <%= image_tag 'sad.png' ,class:"pic" %>
-          </div>
-          <div class="text">
-          <%= render @troubles %>
-          </div>
-          </div>
-      </li>
-  <div id="new_article">
-      <li class="right-side">
-        <div class="pic">
-          <%= image_tag 'kind.png' ,class:"pic" %>
-        </div>
-        <div class="text">
-          <%# <%= render @troubles.encouragement %>
-        </div>
-      </li>
-        </div>
-    </ul>
+  <main class="container-chat">
+    <div class="message-left-side">
+      <div class="pic-chat">
+      <%= image_tag 'sad.png' ,class:"pic" %>
+      </div>
+      <div class="text-chat">
+      <%= render "trouble" %>
+      </div>
+    </div>
+    <div class="message-right-side">
+      <div class="pic-chat">
+      <%= image_tag 'kind.png' ,class:"pic" %>
+      </div>
+      <div class="text-chat">
+      <%# ここには励ましをレンダー%>
+      <%= render @troubles %>
+      </div>
+    </div>
   </div>
-<div class="form-area">
-  <div class="form">
-    <%= form_with(model: @trouble, local: true, id: "new_article") do |f| %>
-      <%= f.text_field :worry, class: "article_form", id: "article_text" %>
-      <%= f.submit "POST" , id: "submit_btn"%>
-      <%# <%= f.text_field :encouragement, class: "article_form", id: "article_text" %>
-      <%= f.submit "POST" , id: "submit_btn"%>
-    <% end %>
+
+  <div class="form-area">
+    <div class="form-chat">
+      <%= form_with(model: @trouble,id: "new_article") do |f| %>
+        <%= f.text_field :worry, class: "article_form", id: "article_text", placeholder: "悩みをつぶやこう" %>
+        <%= f.submit "POST" , id: "submit_btn"%>
+      <% end %>
+    </div>
+    <div class="form-chat">
+      <%= form_with(model: @trouble,id: "new_article") do |f| %>
+        <%= f.text_field :worry, class: "article_form", id: "article_text", placeholder: "悩みに対して、もう一人の自分が温かい声をかけよう" %>
+        <%= f.submit "POST" , id: "submit_btn"%>
+      <% end %>
+    </div>
   </div>
-</div>
+</main>
