@@ -9,22 +9,23 @@
       <% end %>
     </div>
     <div class="form-chat">
-      <%= form_with(model: @trouble,id: "new_article") do |f| %>
-        <%= f.text_field :worry, class: "article_form", id: "article_text", placeholder: "悩みに対して、もう一人の自分が温かい声をかけよう" %>
-        <%= f.submit "POST" , id: "submit_btn"%>
-      <% end %>
+      <%= render "encouragements/index" %>
+      <%# <%= form_with(model: @encouragement,id: "form_encouragement") do |f| %> %>
+        <%# <%= f.text_field :encouragement, id: "content_encouragement", placeholder: "悩みに対して、もう一人の自分が温かい声をかけよう" %> %>
+        <%# <%= f.submit "POST" , id: "submit_encouragement"%> %>
+      <%# <% end %> %>
     </div>
   </div>
 
   <div id="list_messages">
     <ul class="messages">
-      <li class="message-right-side">
-        <div class="pic-chat">
-        <img src="/assets/kind.png" alt="励ましている画像">
-        </div>
-        <div class="text-chat">
-        </div>
-      </li> 
+      <%# <li class="message-right-side"> %>
+        <%# <div class="pic-chat"> %>
+        <%# <img src="/assets/kind.png" alt="励ましている画像"> %>
+        <%# </div> %>
+        <%# <div class="text-chat"> %>
+        <%# </div> %>
+      <%# </li>  %>
     </ul>
   </div>
 
@@ -43,6 +44,22 @@
         </div>
       </li>
   <% end %>
+
+  <%# <% @encouragements.each do |encouragement| %> %>
+    <%# <li class="message-right-side"> %>
+        <%# <div class="pic-chat"> %>
+        <%# <img src="/assets/kind.png" alt="励ましている画像"> %>
+        <%# </div> %>
+        <%# <div class="text-chat"> %>
+          <%# <div class="post-content"> %>
+          <%# <%= encouragement.encouragement %> %>
+          <%# </div> %>
+          <%# <div class="post-date"> %>
+          <%# 投稿日時：<%= encouragement.created_at %> %>
+          <%# </div> %>
+        <%# </div> %>
+      <%# </li> %>
+  <%# <% end %> %>
 </main>
 <%= render "shared/login_after_footer" %>
 </div>
