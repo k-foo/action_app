@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   get 'homes/index'
   resources :objectives
   resources :troubles
-  resources :encouragements
 end
