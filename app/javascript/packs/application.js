@@ -9,7 +9,6 @@ require("@rails/activestorage").start()
 require("channels")
 require("../passcheck")
 require("../post")
-require("../courage_post")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
