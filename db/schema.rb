@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_01_20_133115) do
 
   create_table "troubles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.integer "message_type", default: 0
     t.text "worry"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

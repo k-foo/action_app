@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head prefix=”og: http://ogp.me/ns#”>
     <title>Action</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta id="ogp_url" property="og:url" content="https://action-today.herokuapp.com/" />
+    <meta id="ogp_type" property="og:type" content="website" />
+    <meta property="og:title" content="LET'S START TODAY" />
+    <meta property="og:description" content="成長したいあなたに。「if thenルールによる習慣化」「WOOPの法則による目標設定」「チャット風セルフコンパッション」が出来るアプリケーションです。"/>
+    <meta property="og:site_name" content="Action" />
+    <meta name="twitter:card" content="summary_large_image" />  
+    <meta name="twitter:site" content="@cherry202013" />
+    <meta property="og:image" content="https://action-today.herokuapp.com/images/ogp.jpg" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>

@@ -1,48 +1,58 @@
 <div class="wrapper">
-<%= render "shared/login_after_header" %>
-<main class="container-chat">
-  <div class="form-area">
-    <div class="form-chat">
-      <%= form_with(model: @trouble,id: "form_worry") do |f| %>
-        <%= f.text_field :worry, id: "content_worry", placeholder: "悩みをつぶやこう" %>
-        <%= f.submit "POST" , id: "submit_worry"%>
-      <% end %>
-    </div>
-    <div class="form-chat">
-      <%= form_with(model: @trouble,id: "new_article") do |f| %>
-        <%= f.text_field :worry, class: "article_form", id: "article_text", placeholder: "悩みに対して、もう一人の自分が温かい声をかけよう" %>
-        <%= f.submit "POST" , id: "submit_btn"%>
-      <% end %>
-    </div>
-  </div>
-
-  <div id="list_messages">
-    <ul class="messages">
-      <li class="message-right-side">
-        <div class="pic-chat">
-        <img src="/assets/kind.png" alt="励ましている画像">
+  <%= render "shared/login_after_header" %>
+    <%# 投稿フォーム %>
+    <main class="container-chat">
+      <div class="form-area">
+        <div class="form-chat">
+          <%= form_with(model: @trouble,id: "self_compassion") do |f| %>
+            <%= f.label :trouble, "悩みをつぶやく"%>
+            <%= f.radio_button :message_type, :trouble %>
+            <%= f.label :encouragement, "励ましの言葉をかける" %>
+            <%= f.radio_button :message_type, :encouragement  %>
+            <%= f.text_field :worry, id: "content_worry", placeholder: "メッセージを入力" %>
+            <%= f.submit "POST" , id: "submit_message"%>
+          <% end %>
         </div>
-        <div class="text-chat">
-        </div>
-      </li> 
-    </ul>
-  </div>
-
-  <% @troubles.each do |trouble| %>
-    <li class="message-left-side">
-        <div class="pic-chat">
-        <img src="/assets/sad.png" alt="落ち込んでいる画像">
-        </div>
-        <div class="text-chat">
-          <div class="post-content">
-          <%= trouble.worry %>
-          </div>
-          <div class="post-date">
-          投稿日時：<%= trouble.created_at %>
-          </div>
-        </div>
-      </li>
-  <% end %>
-</main>
-<%= render "shared/login_after_footer" %>
+      </div>
+      <%# 最新のメッセージが反映される場所 %>
+      <div id="list_messages">
+        <ul class="messages">
+        </ul>
+      </div>
+      <%# 今までのメッセージが表示される場所%>
+      <div class="index_area">
+        <% @troubles.each do |trouble| %>
+          <% if trouble.trouble? %>
+            <li class="message-left-side">
+              <div class="pic-chat">
+                <img src="/assets/sad.png" alt="落ち込んでいる画像">
+              </div>
+              <div class="text-chat">
+                <div class="post-content">
+                  <%= trouble.worry %>
+                </div>
+                <div class="post-date">
+                投稿日時：<%= l trouble.created_at %>
+                </div>
+              </div>
+            </li>
+          <% else trouble.encouragement? %>
+            <li class="message-right-side">
+              <div class="pic-chat">
+                <img src="/assets/kind.png" alt="励ましている画像">
+              </div>
+              <div class="text-chat">
+                <div class="post-content">
+                <%= trouble.worry %>
+                </div>
+                <div class="post-date">
+                投稿日時：<%= l trouble.created_at %>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        <% end %>
+       </div>
+    </main>
+  <%= render "shared/login_after_footer" %>
 </div>

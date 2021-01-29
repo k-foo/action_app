@@ -17,6 +17,6 @@ class TroublesController < ApplicationController
   private
 
   def trouble_params
-    params.require(:trouble).permit(:worry).merge(user_id: current_user.id)
+    params.require(:trouble).permit(:message_type, :worry).merge(user_id: current_user.id)
   end
 end
