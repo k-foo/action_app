@@ -4,7 +4,7 @@
     <%= link_to image_tag("icon.png", class:"action-icon"), objectives_path %>
     </ul>    
     <ul class='lists-right'>
-      <li><%= link_to  "#", class: "btn rules_page" do %> <%= image_tag "rules.png", size:'50x50'%>習慣カウント(if thenルール)<% end %></li>
+      <li><%= link_to  habits_path, class: "btn rules_page" do %> <%= image_tag "rules.png", size:'50x50'%>習慣カウント(if thenルール)<% end %></li>
       <li><%= link_to  objectives_path, class: "btn objectives_page" do %> <%= image_tag "goal.png", size:'50x50'%>目標設定(WOOPの法則)<% end %></li>
       <li><%= link_to  troubles_path, class: "btn troubles_page" do %> <%= image_tag "care.png", size:'50x50'%>セルフコンパッション<% end %></li>
     </ul>
