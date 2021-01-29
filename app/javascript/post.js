@@ -14,15 +14,7 @@ function post() {
       const item = XHR.response.trouble;
       const list = document.getElementById("list_messages");
       const formText = document.getElementById("content_worry");
-
-      // const elem = document.querySelector("#trouble_message_type_encouragement")
-      // if(elem) { // または elem === null で比較
-      // console.log('発見！', elem);
-      // } else {
-      // console.error('見つからない');
-      // };
-
-      if(document.querySelector("#trouble_message_type_encouragement")) {
+      if(document.querySelector("#trouble_message_type_trouble").checked) {
       const HTML_trouble= `
       <li class="message-left-side">
         <div class="pic-chat">
@@ -39,7 +31,7 @@ function post() {
       list.insertAdjacentHTML("afterend", HTML_trouble);
       formText.value = "";
       return false;
-    } else (document.querySelector("#trouble_message_type_encouragement"))
+    } else (document.querySelector("#trouble_message_type_encouragement").checked)
       const HTML_encouragement= `
       <li class="message-right-side">
         <div class="pic-chat">
