@@ -25,7 +25,7 @@ function post() {
           ${item.worry}
         </div>
         <div class="post-date">
-          投稿日時：${item.created_at}
+          投稿日時：${item.created_at.slice(0,19)}
         </div>
       </li>`;
       list.insertAdjacentHTML("afterend", HTML_trouble);
@@ -42,7 +42,7 @@ function post() {
           ${item.worry}
         </div>
         <div class="post-date">
-          投稿日時：${item.created_at}
+          投稿日時：${item.created_at.slice(0,19)}
         </div>
       </li>`;
       list.insertAdjacentHTML("afterend", HTML_encouragement);
