@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :objectives
   resources :troubles
   resources :habits
+  resources :rules
 end
