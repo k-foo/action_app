@@ -26,13 +26,14 @@
 .lists-left {
   display: flex;
   min-width: 200px;
+  justify-content: center;
 
 }
 
 .lists-right {
   display: flex;
   list-style: none;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .user-nickname {
@@ -58,4 +59,9 @@
 .sign-up {
   text-decoration: none;
   color: #333333;
+}
+
+
+.user-info{
+  justify-content: center;
 }
