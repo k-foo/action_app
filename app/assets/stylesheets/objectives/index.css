@@ -977,13 +977,23 @@ div.contents.row .success h3 {
   margin: 10px auto;
 }
 
-form input,
 form textarea {
+  width: 100%;
   margin: 5px 0 15px;
   padding: 10px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
+}
+
+form input {
+  width: 30%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+  text-align: center;
 }
 
 form input[type="submit"] {
@@ -1004,6 +1014,7 @@ form input[type="submit"]:hover {
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .container h3 {
