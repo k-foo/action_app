@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   # ログイン後はobjectivesページに遷移
   def after_sign_in_path_for(resource)
-    objectives_path(resource)
+    habits_path(resource)
   end
 
   private
