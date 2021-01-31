@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_30_085215) do
+ActiveRecord::Schema.define(version: 2021_01_29_065529) do
 
   create_table "habits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -42,25 +42,6 @@ ActiveRecord::Schema.define(version: 2021_01_30_085215) do
     t.index ["user_id"], name: "index_objectives_on_user_id"
   end
 
-  create_table "rules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "habit_id", null: false
-    t.string "if_1"
-    t.string "then_1"
-    t.string "if_2"
-    t.string "then_2"
-    t.string "if_3"
-    t.string "then_3"
-    t.string "if_4"
-    t.string "then_4"
-    t.string "if_5"
-    t.string "then_5"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["habit_id"], name: "index_rules_on_habit_id"
-    t.index ["user_id"], name: "index_rules_on_user_id"
-  end
-
   create_table "troubles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "message_type", default: 0
@@ -86,7 +67,5 @@ ActiveRecord::Schema.define(version: 2021_01_30_085215) do
 
   add_foreign_key "habits", "users"
   add_foreign_key "objectives", "users"
-  add_foreign_key "rules", "habits"
-  add_foreign_key "rules", "users"
   add_foreign_key "troubles", "users"
 end
