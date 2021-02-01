@@ -35,7 +35,7 @@ function post() {
       const HTML_encouragement= `
       <li class="message-right-side">
         <div class="pic-chat">
-          <img src="/assets/kind.png" alt="励ましている画像">
+          <img src="<%= asset_path "kind.png" %>" alt="励ましている画像">
         </div>
         <div class="text-chat">
         <div class="post-content">
