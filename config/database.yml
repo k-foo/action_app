@@ -50,5 +50,7 @@ test:
 production:
   <<: *default
   database: action_app_production
-  username: action_app
-  password: <%= ENV['ACTION_APP_DATABASE_PASSWORD'] %>
+  # AWSのために下記を編集
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
