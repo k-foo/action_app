@@ -1,5 +1,11 @@
 require 'rails_helper'
 
+def basic_pass
+  username = ENV['BASIC_AUTH_USER']
+  password = ENV['BASIC_AUTH_PASSWORD']
+  visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}"
+end
+
 RSpec.describe 'WOOPの法則による目標設定', type: :system do
   before do
     @user = FactoryBot.create(:user)
@@ -7,12 +13,12 @@ RSpec.describe 'WOOPの法則による目標設定', type: :system do
   end
   context '目標登録ができるとき' do
     it 'ログインしており、正しい情報を入力すれば目標登録ができて目標一覧ページに移動する' do
+     # basic_passのメソッドを実行
+      basic_pass
       # spec/support/log_in_support.rbより、ログインに関するメソッドの呼び出し
       log_in(@user)
       # 目標一覧に移動する
       visit objectives_path
-      # 目標一覧ページに目標を新規に投稿できるボタンがあることを確認する
-      expect(page).to have_content('投稿する')
       # 目標新規作成ページへ移動する
       visit new_objective_path
       # 目標情報を入力する
@@ -36,8 +42,6 @@ RSpec.describe 'WOOPの法則による目標設定', type: :system do
       log_in(@user)
       # 目標一覧に移動する
       visit objectives_path
-      # 目標一覧ページに目標を新規に投稿できるボタンがあることを確認する
-      expect(page).to have_content('投稿する')
       # 目標新規作成ページへ移動する
       visit new_objective_path
       # 目標情報を入力する

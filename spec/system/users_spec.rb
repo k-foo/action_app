@@ -1,11 +1,19 @@
 require 'rails_helper'
 
+def basic_pass
+  username = ENV['BASIC_AUTH_USER']
+  password = ENV['BASIC_AUTH_PASSWORD']
+  visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}"
+end
+
 RSpec.describe 'ユーザー新規登録', type: :system do
   before do
     @user = FactoryBot.build(:user)
   end
   context 'ユーザー新規登録ができるとき' do
     it '正しい情報を入力すればユーザー新規登録ができてトップページに移動する' do
+      # basic_passのメソッドを実行
+      basic_pass
       # トップページに移動する
       visit root_path
       # トップページにサインアップページへ遷移するボタンがあることを確認する
@@ -24,12 +32,8 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       expect do
         find('input[name="commit"]').click
       end.to change { User.count }.by(1)
-      # トップページへ遷移する
-      expect(current_path).to eq root_path
-      # カーソルを合わせるとログアウトボタンが表示されることを確認する
-      expect(
-        find('.logout').hover
-      ).to have_content('ログアウト')
+      # ログアウトボタンが表示されることを確認する
+      expect(page).to have_content('ログアウト')
       # サインアップページへ遷移するボタンや、ログインページへ遷移するボタンが表示されていないことを確認する
       expect(page).to have_no_content('新規登録')
       expect(page).to have_no_content('ログイン')

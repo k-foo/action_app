@@ -23,3 +23,17 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %Z"
     am: "午前"
     pm: "午後"
+
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       birthdate: 生年月日
+     objective: 
+       title: タイトル
+       category_id: 目標の期間設定
+       wish: 「願望」
+       outcome: 「結果」
+       obstacle: 「障害」
+       plan: 「計画」
