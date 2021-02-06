@@ -39,32 +39,32 @@ RSpec.describe Objective, type: :model do
       it 'タイトルが空欄だと登録できない' do
         @objective.title = nil
         @objective.valid?
-        expect(@objective.errors.full_messages).to include("タイトルを入力してください")
+        expect(@objective.errors.full_messages).to include('タイトルを入力してください')
       end
       it 'カテゴリーの情報が空欄だと登録できない' do
         @objective.category_id = nil
         @objective.valid?
-        expect(@objective.errors.full_messages).to include("目標の期間設定を入力してください")
+        expect(@objective.errors.full_messages).to include('目標の期間設定を入力してください')
       end
       it '「願望」部分が空欄だと登録できない' do
         @objective.wish = nil
         @objective.valid?
-        expect(@objective.errors.full_messages).to include("「願望」を入力してください")
+        expect(@objective.errors.full_messages).to include('「願望」を入力してください')
       end
       it '「結果」部分が空欄だと登録できない' do
         @objective.outcome = nil
         @objective.valid?
-        expect(@objective.errors.full_messages).to include("「結果」を入力してください")
+        expect(@objective.errors.full_messages).to include('「結果」を入力してください')
       end
       it '「障害」部分が空欄だと登録できない' do
         @objective.obstacle = nil
         @objective.valid?
-        expect(@objective.errors.full_messages).to include("「障害」を入力してください")
+        expect(@objective.errors.full_messages).to include('「障害」を入力してください')
       end
       it '「計画」部分が空欄だと登録できない' do
         @objective.plan = nil
         @objective.valid?
-        expect(@objective.errors.full_messages).to include("「計画」を入力してください")
+        expect(@objective.errors.full_messages).to include('「計画」を入力してください')
       end
     end
   end
