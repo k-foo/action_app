@@ -23,3 +23,10 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %Z"
     am: "午前"
     pm: "午後"
+
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       birthdate: 生年月日

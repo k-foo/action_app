@@ -24,53 +24,54 @@ RSpec.describe User, type: :model do
       it 'ニックネームが空欄だと保存できない' do
         @user.nickname = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Nickname can't be blank")
+        # binding.pry
+        expect(@user.errors.full_messages).to include('ニックネームを入力してください')
       end
       it 'ニックネームが15字を超えると保存できない' do
         @user.nickname = 'ピチューピカチュウライチュー１２３'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Nickname is too long (maximum is 15 characters)')
+        expect(@user.errors.full_messages).to include('ニックネームは15文字以内で入力してください')
       end
       it 'メールアドレスが空欄だと保存できない' do
         @user.email = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Email can't be blank")
+        expect(@user.errors.full_messages).to include('Eメールを入力してください')
       end
       it 'メールアドレスがすでに登録しているユーザーと重複していると保存できない' do
         @user.save
         another_user = FactoryBot.build(:user)
         another_user.email = @user.email
         another_user.valid?
-        expect(another_user.errors.full_messages).to include('Email has already been taken')
+        expect(another_user.errors.full_messages).to include('Eメールはすでに存在します')
       end
       it 'パスワードが空欄だと保存できない' do
         @user.password = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password can't be blank", 'Password Include both letters and numbers',
-                                                      "Password confirmation doesn't match Password")
+        expect(@user.errors.full_messages).to include('パスワードを入力してください', 'パスワードは15文字以上で入力してください', 'パスワード半角英数字で入力してください',
+                                                      'パスワード（確認用）とパスワードの入力が一致しません')
       end
       it 'パスワード（確認含む）が15文字未満だと保存できない' do
         @user.password = 'ab123'
         @user.password_confirmation = 'ab123'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Password is too short (minimum is 15 characters)')
+        expect(@user.errors.full_messages).to include('パスワードは6文字以上で入力してください', 'パスワードは15文字以上で入力してください')
       end
       it 'パスワード（確認含む）が半角英数字でないと保存できない' do
         @user.password = '123456'
         @user.password_confirmation = '123456'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Password Include both letters and numbers')
+        expect(@user.errors.full_messages).to include('パスワードは15文字以上で入力してください', 'パスワード半角英数字で入力してください')
       end
       it 'パスワード（確認）が空欄だと保存できない' do
         @user.password = '123abc'
         @user.password_confirmation = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません', 'パスワードは15文字以上で入力してください')
       end
       it '生年月日が空欄だと保存できない' do
         @user.birthdate = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Birthdate can't be blank")
+        expect(@user.errors.full_messages).to include('生年月日を入力してください')
       end
     end
   end
