@@ -10,24 +10,18 @@
   background-color: #fff;
 }
 
-.action-icon {
-  width: 10vw;
-}
-
-.nav {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1vh 0;
 }
 
 .lists-left {
   display: flex;
   min-width: 200px;
   justify-content: center;
-
 }
 
 .lists-right {
@@ -36,31 +30,10 @@
   align-items: center;
 }
 
-.user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
-}
-
-
-.logout {
-  text-decoration: none;
-  color: #333333;
-}
-
-.login {
-  text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
-}
-
 .sign-up {
   text-decoration: none;
   color: #333333;
 }
-
 
 .user-info{
   justify-content: center;
