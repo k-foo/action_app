@@ -30,3 +30,10 @@ ja:
      user:
        nickname: ニックネーム
        birthdate: 生年月日
+     objective: 
+       title: タイトル
+       category_id: 目標の期間設定
+       wish: 「願望」
+       outcome: 「結果」
+       obstacle: 「障害」
+       plan: 「計画」
