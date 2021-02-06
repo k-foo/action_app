@@ -23,7 +23,7 @@
   background: linear-gradient(145deg,  #F0EBEB,  #F0EBEB);
   box-shadow:  17px 17px 34px #b5b5b5,
               -17px -17px 34px #ffffff;
-              text-align: center;
+  text-align: center;
  }
             
 .rule1_content, .rule2_content, .rule3_content, .rule4_content, .rule5_content{
