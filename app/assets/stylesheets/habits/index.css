@@ -1,5 +1,5 @@
 .habit_main{
-  height: 350px;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -8,7 +8,7 @@
  }
 
 .rule_main{
-  height: 350px;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -17,8 +17,8 @@
  }
  
 .habit1_content, .habit2_content, .habit3_content, .habit4_content, .habit5_content{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50px;
   background: linear-gradient(145deg,  #F0EBEB,  #F0EBEB);
   box-shadow:  17px 17px 34px #b5b5b5,
@@ -27,8 +27,8 @@
  }
             
 .rule1_content, .rule2_content, .rule3_content, .rule4_content, .rule5_content{
-    width: 300px;
-    height: 300px;
+    width: 190px;
+    height: 190px;
     border-radius: 250px;
     background: linear-gradient(145deg, #ffffff, #dfdfe6);
     box-shadow:  14px 14px 100px #b8b8bd,
@@ -40,7 +40,7 @@
  }
 
 .good_word_content{
-  height: 50px;
+  height: auto;
   width: 100%;
   background-color: lightskyblue;
   display: flex;
@@ -48,7 +48,7 @@
 } 
 
 .text_habit {
-  font-size: 24px;
+  font-size: 20px;
   position: relative;
   display: inline-block;
   padding: 0 55px;
