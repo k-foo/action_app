@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 30px;
+  padding: 15px;
  }
 
 .rule_main{
@@ -13,7 +13,8 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  padding: 30px;
+  padding: 15px;
+  padding-top: 0;
  }
  
 .habit1_content, .habit2_content, .habit3_content, .habit4_content, .habit5_content{
