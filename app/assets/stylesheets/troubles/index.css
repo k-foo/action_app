@@ -30,8 +30,10 @@
   display: inline-block;
 }
 
-.form-chat input[type=radio] {
-  display: none;
+.form-chat input[type=radio]{
+  opacity: 0;
+  height: 0;
+  display: flex;
 }
 
 .form-chat label:focus,
@@ -96,7 +98,7 @@
 
 /* フォーム部分 */
 input[type="text"] {
-  width: 500px;
+  width: 35em;
   height: 40px;
   text-align: center;
   padding: 10px;
