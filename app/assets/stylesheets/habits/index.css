@@ -89,34 +89,14 @@
 }
 
 .save_center {
-  margin-top: 20px;
+	margin-top: 20px;
   width: 20%;
   border-radius: 43px;
   background: linear-gradient(145deg, #FFBA78, #FFBA78);
   box-shadow:  10px 10px 20px #b8b8bd,
-  -10px -10px 20px #ffffff;
+	-10px -10px 20px #ffffff;
+	cursor: pointer;
 }
-/* 
-@keyframes click-wave {
-  0% {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    opacity: 0.35;
-  }
-  100% {
-    width: 200px;
-    height: 200px;
-    margin-top: -80px;
-    margin-left: -80px;
-    opacity: 0;
-  }
-}
-
-.save_center_content .commit{
-  -webkit-animation: click-wave 0.65s;
-  animation: click-wave 0.65s;
-} */
 
 /* チェックボタン */
 
@@ -157,10 +137,10 @@
   background: #d7cbcb;
 } 
 .habit1_content_count .count_1:checked {
-  background: #da3c41;
+  background: #FFBA78;
 }
 .habit1_content_count .restart_1:checked {
-  background: #da3c41;
+  background: #FFBA78;
 }
 
 /* 睡眠 */
@@ -171,10 +151,10 @@
 	background: #d7cbcb;
 } 
 .habit2_content_count .count_2:checked {
-	background: #da3c41;
+	background: #FFBA78;
 }
 .habit2_content_count .restart_2:checked {
-	background: #da3c41;
+	background: #FFBA78;
 }
 
 /* 運動 */
@@ -185,10 +165,10 @@
 	background: #d7cbcb;
 } 
 .habit3_content_count .count_3:checked {
-	background: #da3c41;
+	background: #FFBA78;
 }
 .habit3_content_count .restart_3:checked {
-	background: #da3c41;
+	background: #FFBA78;
 }
 
 /* 学び */
@@ -199,10 +179,10 @@
 	background: #d7cbcb;
 } 
 .habit4_content_count .count_4:checked {
-	background: #da4c41;
+	background: #FFBA78;
 }
 .habit4_content_count .restart_4:checked {
-	background: #da3c41;
+	background: #FFBA78;
 }
 
 /* マインド */
@@ -213,10 +193,10 @@
 	background: #d7cbcb;
 } 
 .habit5_content_count .count_5:checked {
-	background: #da5c51;
+	background: #FFBA78;
 }
 .habit5_content_count .restart_5:checked {
-	background: #da3c41;
+	background: #FFBA78;
 }
 
 /* 食事 */
@@ -339,7 +319,7 @@
   position: relative;
 	display: block;
 	content: '';
-	background: #da3c41;
+	background: #FFBA78;
 }
 
 .habit1_content_count .count_1 .restart_1 .habit2_content_count .count_2 .restart_2 .habit3_content_count .count_3 .restart_3 .habit4_content_count .count_4 .restart_4 .habit5_content_count .count_5 .restart_5 .radio {
