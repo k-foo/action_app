@@ -66,7 +66,6 @@
   border-bottom: solid 1px black;
 }
 
-
 .text_habit:before {
   left:0;
 }
@@ -75,6 +74,15 @@
   right: 0;
 }
 
+
+.career_text {
+  font-size: 32px;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+}
+
+/* セーブボタン */
 .save_center_content {
   display: flex;
   justify-content: center;
@@ -86,12 +94,274 @@
   border-radius: 43px;
   background: linear-gradient(145deg, #FFBA78, #FFBA78);
   box-shadow:  10px 10px 20px #b8b8bd,
-             -10px -10px 20px #ffffff;
+  -10px -10px 20px #ffffff;
+}
+/* 
+@keyframes click-wave {
+  0% {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    opacity: 0.35;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    margin-top: -80px;
+    margin-left: -80px;
+    opacity: 0;
+  }
 }
 
-.career_text {
-  font-size: 32px;
-  font-style: italic;
-  line-height: 1.5;
-  letter-spacing: 0.12em;
+.save_center_content .commit{
+  -webkit-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+} */
+
+/* チェックボタン */
+
+/* 食事・睡眠 */
+.habit1_content_count, .habit2_content_count, .habit3_content_count, .habit4_content_count ,.habit5_content_count{
+  width: 90%;
+	margin: 1em auto;
+}
+
+.label_count_1, .label_restart_1,.label_count_2, .label_restart_2, .label_count_3, .label_restart_3,.label_count_4, .label_restart_4,.label_count_5, .label_restart_5{
+  vertical-align: 0.8em;
+}
+
+.habit1_content_count .count_1, .restart_1, .count_2, .restart_2, .count_3, .restart_3, .count_4, .restart_4, .count_5, .restart_5{
+	position: relative;
+	top: 13.33333px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	margin-right: 0.5rem;
+	cursor: pointer;
+	transition: all 0.15s ease-out 0s;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	background: #d7cbcb;
+	-webkit-appearance: none;
+	        appearance: none;
+}
+
+/* 食事 */
+.habit1_content_count .count_1:hover{
+	background: #d7cbcb;
+}
+.habit1_content_count .restart_1:hover{
+  background: #d7cbcb;
+} 
+.habit1_content_count .count_1:checked {
+  background: #da3c41;
+}
+.habit1_content_count .restart_1:checked {
+  background: #da3c41;
+}
+
+/* 睡眠 */
+.habit2_content_count .count_2:hover{
+  background: #d7cbcb;
+}
+.habit2_content_count .restart_2:hover{
+	background: #d7cbcb;
+} 
+.habit2_content_count .count_2:checked {
+	background: #da3c41;
+}
+.habit2_content_count .restart_2:checked {
+	background: #da3c41;
+}
+
+/* 運動 */
+.habit3_content_count .count_3:hover{
+  background: #d7cbcb;
+}
+.habit3_content_count .restart_3:hover{
+	background: #d7cbcb;
+} 
+.habit3_content_count .count_3:checked {
+	background: #da3c41;
+}
+.habit3_content_count .restart_3:checked {
+	background: #da3c41;
+}
+
+/* 学び */
+.habit4_content_count .count_4:hover{
+  background: #d7cbcb;
+}
+.habit4_content_count .restart_4:hover{
+	background: #d7cbcb;
+} 
+.habit4_content_count .count_4:checked {
+	background: #da4c41;
+}
+.habit4_content_count .restart_4:checked {
+	background: #da3c41;
+}
+
+/* マインド */
+.habit5_content_count .count_5:hover{
+  background: #d7cbcb;
+}
+.habit5_content_count .restart_5:hover{
+	background: #d7cbcb;
+} 
+.habit5_content_count .count_5:checked {
+	background: #da5c51;
+}
+.habit5_content_count .restart_5:checked {
+	background: #da3c41;
+}
+
+/* 食事 */
+.habit1_content_count .count_1:checked::before{
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+.habit1_content_count .restart_1:checked::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+/* 睡眠 */
+.habit2_content_count .count_2:checked::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+.habit2_content_count .restart_2:checked::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+/* 運動 */
+.habit3_content_count .count_3:checked::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+.habit3_content_count .restart_3:checked::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+/* 学び */
+.habit4_content_count .count_4:checked::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+.habit4_content_count .restart_4:checked::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+/* マインド */
+.habit5_content_count .count_5:checked::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+.habit5_content_count .restart_5:checked::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✔';
+	text-align: center;
+}
+
+/* 食事・睡眠・運動・学び・マインド */
+.habit1_content_count .count_1 .restart_1 .habit2_content_count .count_2 .restart_2 .habit3_content_count .count_3 .restart_3 .habit4_content_count .count_4 .restart_4:checked .habit5_content_count .count_5 .restart_5:checked::after {
+  position: relative;
+	display: block;
+	content: '';
+	background: #da3c41;
+}
+
+.habit1_content_count .count_1 .restart_1 .habit2_content_count .count_2 .restart_2 .habit3_content_count .count_3 .restart_3 .habit4_content_count .count_4 .restart_4 .habit5_content_count .count_5 .restart_5 .radio {
+  border-radius: 50%;
+}
+
+.habit1_content_count .habit2_content_count .habit3_content_count .habit3_content_count .habit5_content_count label {
+  line-height: 40px;
+}
+
+.habit1_content_count .count_1 .restart_1 .habit2_content_count .count_2 .restart_2 .habit3_content_count .count_3 .restart_3 .habit4_content_count .count_4 .restart_4 .restart_3 .habit5_content_count .count_5 .restart_5:disabled {
+  cursor: not-allowed;
+	background: #d7cbcb;
+}
+
+.habit1_content_count .count_1 .restart_1 .habit2_content_count .count_2 .restart_2 .habit3_content_count .count_3 .restart_3 .habit4_content_count .count_4 .restart_4 .habit5_content_count .count_5 .restart_5:disabled::before {
+  font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	content: '✖︎';
+	text-align: center;
 }
