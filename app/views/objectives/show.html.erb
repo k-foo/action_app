@@ -18,13 +18,13 @@
               <br><br>
               <li><b><%= @objective.title %></b></li>
               <br><br>
-              <li>【願望（簡単すぎず難しすぎもしない。しかし重要であること。）】<br><%= @objective.wish %></li>
+              <li>【願望（簡単すぎず難しすぎもしない。しかし重要であること。）】<br><%= safe_join(@objective.wish.split("\n"),tag(:br)) %></li>
               <br><br>
-              <li>【結果（願望が叶った時の最高の結果による感情・状況・メリット）】<br><%= @objective.outcome %></li>
+              <li>【結果（願望が叶った時の最高の結果による感情・状況・メリット）】<br><%= safe_join(@objective.outcome.split("\n"),tag(:br)) %></li>
               <br><br>
-              <li>【障害（願望を叶えるために起こりうる障害）】<br><%= @objective.obstacle %></li>
+              <li>【障害（願望を叶えるために起こりうる障害）】<br><%= safe_join(@objective.obstacle.split("\n"),tag(:br)) %></li>
               <br><br>
-              <li>【計画（障害に対する対処方法・回避方法）】<br><%= @objective.plan%></li>
+              <li>【計画（障害に対する対処方法・回避方法）】<br><%= safe_join(@objective.plan.split("\n"),tag(:br)) %></li>
               <br><br>
           </ul>
         </div>

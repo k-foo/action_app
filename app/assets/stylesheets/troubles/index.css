@@ -3,12 +3,109 @@
   background: #B79891;
   background: -webkit-linear-gradient(to right, #94716B, #B79891);
   background: linear-gradient(to right, #94716B, #B79891);
-  padding: 50px;
+  padding: 10px 30px;
   border-radius: 50px;
   box-shadow:  17px 17px 34px #b5b5b5,
-              -17px -17px 34px #ffffff;
+  -17px -17px 34px #ffffff;
 }
 
+/* ラジオボタン */
+.form-chat {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.form-chat:before,
+.form-chat:after {
+	-webkit-box-sizing: inherit;
+	        box-sizing: inherit;
+}
+
+.form-chat {
+	width: 90%;
+	margin: 2em auto;
+	text-align: left;
+	border: 1px solid #F0EBEB;
+	border-radius: 30px;
+  background: #F0EBEB;
+  display: inline-block;
+}
+
+.form-chat input[type=radio]{
+  opacity: 0;
+  height: 0;
+  display: flex;
+}
+
+.form-chat label:focus,
+.form-chat label:hover,
+.form-chat label:active,
+.form-chat input:checked + label {
+	color: #F89174;
+}
+
+.form-chat  label:focus:before,
+.form-chat  label:hover:before,
+.form-chat  label:active:before,
+.form-chat  input:checked + label:before {
+	border-color: #F89174;
+}
+
+.form-chat label {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	padding: 1em 1em 1em 3em;
+	cursor: pointer;
+	-webkit-transition: all 0.15s ease;
+	        transition: all 0.15s ease;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.form-chat label:before {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	width: 10px;
+	height: 10px;
+	content: '';
+	border: 0.2em solid #cccccc;
+	border-radius: 50%;
+}
+
+.form-chat input:checked + label:before {
+	border-color: #F89174;
+	background: #F89174;
+}
+
+.form-chat input:disabled + label {
+	cursor: not-allowed;
+	color: #333333;
+	background: #efefef;
+}
+
+.form-chat input:disabled + label:hover {
+	border-color: #333333;
+}
+
+.form-chat input:disabled + label:before {
+	border-color: #ffffff;
+	background: #ffffff;
+}
+
+/* フォーム部分 */
+input[type="text"] {
+  width: 35em;
+  height: 40px;
+  text-align: center;
+  padding: 10px;
+  margin-left: 2em;
+}
+
+/* チャット部分 */
 .messages {
   margin: 0;
   padding: 0;
@@ -76,15 +173,11 @@
   justify-content: space-around;
 }
 
-.form-chat {
-  width: 40%;
-}
-
 .wrapper{
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   /*←footerの高さ*/
   box-sizing: border-box;
   /*←全て含めてmin-height:100vhに*/

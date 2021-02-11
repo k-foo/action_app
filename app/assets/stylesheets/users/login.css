@@ -4,15 +4,20 @@
   margin-top: 50px;
 }
 
-.login-red-btn {
+form input[type="submit"].login-red-btn {
   width: 100%;
   background: #F89174;
   border: 1px solid #F89174;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 20px;
+}
+
+form input[type="submit"].login-red-btn:hover {
+  background-color: hsl(13, 91%, 65%);
+  color: #fff;
 }
 
 .login-flash-message {

@@ -13,7 +13,7 @@ RSpec.describe 'WOOPの法則による目標設定', type: :system do
   end
   context '目標登録ができるとき' do
     it 'ログインしており、正しい情報を入力すれば目標登録ができて目標一覧ページに移動する' do
-     # basic_passのメソッドを実行
+      # basic_passのメソッドを実行
       basic_pass
       # spec/support/log_in_support.rbより、ログインに関するメソッドの呼び出し
       log_in(@user)

@@ -2,118 +2,134 @@
   <%= render "shared/login_after_header" %>
 
     <%= form_with(model: @habit, local: true) do |f| %>
-      <div class="save_center_content"><%= f.submit "S A V E" , class:"save_center"%></div>
-    <div class="habit_main">
+      <div class="save_center_content"><%= f.submit "S A V E" , class:"save_center", id:"save_center"%></div>
+    <div class="habit_main" id="habit_main">
       <div class="habit1_content">
       <ul><h1 class="text_habit">食事</h1>
-      <li>
-      <%= f.label :count_1, 'done!' %>
-      <%= f.check_box :count_1, checked: true %>
-      </li>
-      <li>
-      <%= f.label :restart_1, 'restart!' %>
-      <%= f.check_box :restart_1, checked: false %>
+      <div class="habit1_content_count">
+      <%= f.check_box :count_1, checked: true, class: "count_1" %>
+      <%= f.label :count_1, 'done!', class: "label_count_1" %>
+      <br>
+      <%= f.check_box :restart_1, checked: false, class: "restart_1" %>
+      <%= f.label :restart_1, 'restart!', class: "label_restart_1" %>
+      </div>
       </ul>
+      <div>
+       <p>現在のフォントサイズだと</p>
+       <p>１２文字まで</p>
+      </div>
       </div>
       <div class="habit2_content">
       <ul><h1 class="text_habit">睡眠</h1>
-      <li>
-      <%= f.label :count_2, 'done!' %>
-      <%= f.check_box :count_2, checked: true %>
-      </li>
-      <li>
-      <%= f.label :restart_2, 'restart!' %>
-      <%= f.check_box :restart_2, checked: false %>
+      <div class="habit2_content_count">
+      <%= f.check_box :count_2, checked: true, class: "count_2" %>
+      <%= f.label :count_2, 'done!', class: "label_count_2" %>
+      <br>
+      <%= f.check_box :restart_2, checked: false, class: "restart_2" %>
+      <%= f.label :restart_2, 'restart!', class: "label_restart_2" %>
+      </div>
       </ul>
+      <div>
+       <p>現在のフォントサイズだと</p>
+       <p>１２文字まで</p>
+      </div>
       </div>
       <div class="habit3_content">
       <ul><h1 class="text_habit">運動</h1>
-      <li>
-      <%= f.label :count_3, 'done!' %>
-      <%= f.check_box :count_3, checked: true %>
-      </li>
-      <li>
-      <%= f.label :restart_3, 'restart!' %>
-      <%= f.check_box :restart_3, checked: false %>
-      </li>
+      <div class="habit3_content_count">
+      <%= f.check_box :count_3, checked: true, class: "count_3" %>
+      <%= f.label :count_3, 'done!', class: "label_count_3" %>
+      <br>
+      <%= f.check_box :restart_3, checked: false, class: "restart_3" %>
+      <%= f.label :restart_3, 'restart!', class: "label_restart_3" %>
+      </div>
       </ul>
+      <div>
+       <p>現在のフォントサイズだと</p>
+       <p>１２文字まで</p>
+      </div>
       </div>
       <div class="habit4_content">
       <ul><h1 class="text_habit">学び</h1>
-      <li>
-      <%= f.label :count_4, 'done!' %>
-      <%= f.check_box :count_4, checked: true %>
-      </li>
-      <li>
-      <%= f.label :restart_4, 'restart!' %>
-      <%= f.check_box :restart_4, checked: false %>
-      </li>
+      <div class="habit4_content_count">
+      <%= f.check_box :count_4, checked: true, class: "count_4" %>
+      <%= f.label :count_4, 'done!', class: "label_count_4" %>
+      <br>
+      <%= f.check_box :restart_4, checked: false, class: "restart_4" %>
+      <%= f.label :restart_4, 'restart!', class: "label_restart_4" %>
+      </div>
       </ul>
+      <div>
+       <p>現在のフォントサイズだと</p>
+       <p>１２文字まで</p>
+      </div>
       </div>
       <div class="habit5_content">
       <ul><h1 class="text_habit">マインド</h1>
-      <li>
-      <%= f.label :count_5, 'done!' %>
-      <%= f.check_box :count_5, checked: true %>
-      </li>
-      <li>
-      <%= f.label :restart_5, 'restart!' %>
-      <%= f.check_box :restart_5, checked: false %>
-      </li>
-      </ul>
+      <div class="habit5_content_count">
+      <%= f.check_box :count_5, checked: true, class: "count_5" %>
+      <%= f.label :count_5, 'done!', class: "label_count_5" %>
+      <br>
+      <%= f.check_box :restart_5, checked: false, class: "restart_5" %>
+      <%= f.label :restart_5, 'restart!', class: "label_restart_5" %>
       </div>
       </ul>
+      <div>
+       <p>現在のフォントサイズだと</p>
+       <p>１２文字まで</p>
+      </div>
+      </div>
     </div>
     <% end %>
 
-    <div class="rule_main">
+    <div class="rule_main" id="rule_main">
       <div class="rule1_content">
       <ul>
-      <li class="career_text">
-      <%= "通算#{@user.where(count_1: 1).count}回" %>
+      <li class="career_text" id="career_text">
+      <%= "通算#{@count_1}回" %>
       </li>
-      <li>
-      <%= "（restart#{@user.where(restart_1: 1).count}回）" %>
+      <li id="restart_text">
+      <%= "（restart#{@restart_1}回）" %>
       </li>
       </ul>
       </div>
       <div class="rule2_content">
       <ul>
       <li class="career_text">
-      <%= "通算#{@user.where(count_2: 1).count}回" %>
+      <%= "通算#{@count_2}回" %>
       </li>
       <li>
-      <%= "（restart#{@user.where(restart_2: 1).count}回）" %>
+      <%= "（restart#{@restart_2}回）" %>
       </li>
       </ul>
       </div>
       <div class="rule3_content">
       <ul>
       <li class="career_text">
-      <%= "通算#{@user.where(count_3: 1).count}回" %>
+      <%= "通算#{@count_3}回" %>
       </li>
       <li>
-      <%= "（restart#{@user.where(restart_3: 1).count}回）" %>
+      <%= "（restart#{@restart_3}回）" %>
       </li>
       </ul>
       </div>
       <div class="rule4_content">
       <ul>
       <li class="career_text">
-      <%= "通算#{@user.where(count_4: 1).count}回" %>
+      <%= "通算#{@count_4}回" %>
       </li>
       <li>
-      <%= "（restart#{@user.where(restart_4: 1).count}回）" %>
+      <%= "（restart#{@restart_4}回）" %>
       </li>
       </ul>
       </div>
       <div class="rule5_content">
       <ul>
       <li class="career_text">
-      <%= "通算#{@user.where(count_5: 1).count}回" %>
+      <%= "通算#{@count_5}回" %>
       </li>
       <li>
-      <%= "（restart#{@user.where(restart_5: 1).count}回）"%>
+      <%= "（restart#{@restart_5}回）" %>
       </li>
       </ul>
       </div>
@@ -121,6 +137,5 @@
 
     <div class="good_word_content">
     <div>
-
   <%= render "shared/login_after_footer" %>
 </div>
