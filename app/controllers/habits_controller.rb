@@ -2,9 +2,17 @@ class HabitsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # 合計回数時に使用
-    @user = Habit.where(user_id: current_user.id)
     @habit = Habit.new
+    @count_1 = Habit.includes(:habits).where(user_id: current_user.id).where(count_1: 1).size
+    @count_2 = Habit.includes(:habits).where(user_id: current_user.id).where(count_2: 1).size
+    @count_3 = Habit.includes(:habits).where(user_id: current_user.id).where(count_3: 1).size
+    @count_4 = Habit.includes(:habits).where(user_id: current_user.id).where(count_4: 1).size
+    @count_5 = Habit.includes(:habits).where(user_id: current_user.id).where(count_5: 1).size
+    @restart_1 = Habit.includes(:habits).where(user_id: current_user.id).where(restart_1: 1).size
+    @restart_2 = Habit.includes(:habits).where(user_id: current_user.id).where(restart_2: 1).size
+    @restart_3 = Habit.includes(:habits).where(user_id: current_user.id).where(restart_3: 1).size
+    @restart_4 = Habit.includes(:habits).where(user_id: current_user.id).where(restart_4: 1).size
+    @restart_5 = Habit.includes(:habits).where(user_id: current_user.id).where(restart_5: 1).size
   end
 
   def new

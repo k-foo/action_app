@@ -2,8 +2,8 @@
   <%= render "shared/login_after_header" %>
 
     <%= form_with(model: @habit, local: true) do |f| %>
-      <div class="save_center_content"><%= f.submit "S A V E" , class:"save_center"%></div>
-    <div class="habit_main">
+      <div class="save_center_content"><%= f.submit "S A V E" , class:"save_center", id:"save_center"%></div>
+    <div class="habit_main" id="habit_main">
       <div class="habit1_content">
       <ul><h1 class="text_habit">食事</h1>
       <div class="habit1_content_count">
@@ -82,54 +82,54 @@
     </div>
     <% end %>
 
-    <div class="rule_main">
+    <div class="rule_main" id="rule_main">
       <div class="rule1_content">
       <ul>
-      <li class="career_text">
-      <%= "通算#{@user.where(count_1: 1).count}回" %>
+      <li class="career_text" id="career_text">
+      <%= "通算#{@count_1}回" %>
       </li>
-      <li>
-      <%= "（restart#{@user.where(restart_1: 1).count}回）" %>
+      <li id="restart_text">
+      <%= "（restart#{@restart_1}回）" %>
       </li>
       </ul>
       </div>
       <div class="rule2_content">
       <ul>
       <li class="career_text">
-      <%= "通算#{@user.where(count_2: 1).count}回" %>
+      <%= "通算#{@count_2}回" %>
       </li>
       <li>
-      <%= "（restart#{@user.where(restart_2: 1).count}回）" %>
+      <%= "（restart#{@restart_2}回）" %>
       </li>
       </ul>
       </div>
       <div class="rule3_content">
       <ul>
       <li class="career_text">
-      <%= "通算#{@user.where(count_3: 1).count}回" %>
+      <%= "通算#{@count_3}回" %>
       </li>
       <li>
-      <%= "（restart#{@user.where(restart_3: 1).count}回）" %>
+      <%= "（restart#{@restart_3}回）" %>
       </li>
       </ul>
       </div>
       <div class="rule4_content">
       <ul>
       <li class="career_text">
-      <%= "通算#{@user.where(count_4: 1).count}回" %>
+      <%= "通算#{@count_4}回" %>
       </li>
       <li>
-      <%= "（restart#{@user.where(restart_4: 1).count}回）" %>
+      <%= "（restart#{@restart_4}回）" %>
       </li>
       </ul>
       </div>
       <div class="rule5_content">
       <ul>
       <li class="career_text">
-      <%= "通算#{@user.where(count_5: 1).count}回" %>
+      <%= "通算#{@count_5}回" %>
       </li>
       <li>
-      <%= "（restart#{@user.where(restart_5: 1).count}回）"%>
+      <%= "（restart#{@restart_5}回）" %>
       </li>
       </ul>
       </div>
