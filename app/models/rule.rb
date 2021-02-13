@@ -1,7 +1,7 @@
 class Rule < ApplicationRecord
   belongs_to :user
 
-  with_options length: { maximum: 12 } do
+  with_options length: { maximum: 12 }, presence: true do
     validates :if_1
     validates :then_1
     validates :if_2
