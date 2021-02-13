@@ -2,3 +2,13 @@
   display: flex;
   justify-content: center;
 }
+
+.point_description{
+  border-radius: 60px;
+  background: #FFBA78;
+  padding: 30px;
+}
+
+.point_description, li{
+  text-align: left;
+}
