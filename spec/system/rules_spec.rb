@@ -39,11 +39,37 @@ RSpec.describe 'イフゼンルールの設定', type: :system do
       expect do
         find('input[name="commit"]').click
       end.to change { Rule.count }.by(1)
-      # 目標一覧ページへ遷移する
     end
   end
   context 'イフゼンルールの設定ができない時' do
     it '新規投稿後、保存できず、入力ページにとどまる' do
+      # basic_passのメソッドを実行
+      basic_pass
+      # spec/support/log_in_support.rbより、ログインに関するメソッドの呼び出し
+      log_in(@user)
+      # 習慣ページへ遷移
+      visit habits_path
+      # 習慣ページには「イフゼンルールの設定」へのリンクがある
+      expect(page).to have_content('イフゼンルールの設定')
+      # 「イフゼンルールの設定」ボタンをクリックする
+      click_link 'イフゼンルールの設定'
+      # イフゼンルールのページへ遷移する
+      visit rules_path
+      # フォームにそれぞれ入力する
+      fill_in 'rule_if_1', with: '食事のイフルール、１２文字以上の設定'
+      fill_in 'rule_then_1', with: '食事のゼンルール、１２文字以上の設定'
+      fill_in 'rule_if_2', with: '睡眠のイフルール、１２文字以上の設定'
+      fill_in 'rule_then_2', with: '睡眠のゼンルール、１２文字以上の設定'
+      fill_in 'rule_if_3', with: '運動のイフルール、１２文字以上の設定'
+      fill_in 'rule_then_3', with: '運動のゼンルール、１２文字以上の設定'
+      fill_in 'rule_if_4', with: '学びのイフルール、１２文字以上の設定'
+      fill_in 'rule_then_4', with: '学びのゼンルール、１２文字以上の設定'
+      fill_in 'rule_if_5', with: 'マインドのイフルール、１２文字以上の設定'
+      fill_in 'rule_then_5', with: 'マインドのゼンルール、１２文字以上の設定'
+      # 保存ボタンを押すとイフゼンルール設定のカウントが1上がることを確認する
+      expect do
+        find('input[name="commit"]').click
+      end.to change { Rule.count }.by(0)
     end
   end
 end
