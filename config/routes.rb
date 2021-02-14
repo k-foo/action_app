@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'homes#index'
   get 'homes/index'
   resources :objectives
-  resources :troubles
-  resources :habits
+  resources :troubles, only: [:index, :new, :create]
+  resources :habits, only: [:index, :new, :create]
+  resources :rules, only: [:index, :create, :edit, :update]
 end

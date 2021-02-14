@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 15px;
+	padding: 15px;
  }
 
 .rule_main{
@@ -15,11 +15,12 @@
   align-items: flex-end;
   padding: 15px;
   padding-top: 0;
+  padding-bottom: 0;
  }
  
 .habit1_content, .habit2_content, .habit3_content, .habit4_content, .habit5_content{
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   border-radius: 50px;
   background: linear-gradient(145deg,  #F0EBEB,  #F0EBEB);
   box-shadow:  17px 17px 34px #b5b5b5,
@@ -27,25 +28,23 @@
   text-align: center;
  }
             
-.rule1_content, .rule2_content, .rule3_content, .rule4_content, .rule5_content{
-    width: 190px;
-    height: 190px;
-    border-radius: 250px;
-    background: linear-gradient(145deg, #ffffff, #dfdfe6);
-    box-shadow:  14px 14px 100px #b8b8bd,
-    -14px -14px 100px #ffffff;
-    text-align: center;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+.rule1_content, .rule2_content{
+  width: 165px;
+	height: 165px;
+	border-radius: 250px;
+	background: linear-gradient(145deg, #ffffff, #dfdfe6);
+	box-shadow:  14px 14px 100px #b8b8bd,
+	-14px -14px 100px #ffffff;
+	text-align: center;
+	display: flex;
+	justify-content:center;
+	align-items: center;
  }
 
-.good_word_content{
-  height: auto;
-  width: 100%;
-  background-color: lightskyblue;
-  display: flex;
-  align-items: center;
+.restart{
+	display: flex;
+	justify-content: space-around;
+	padding: 15px;
 } 
 
 .text_habit {
@@ -73,7 +72,6 @@
 .text_habit:after {
   right: 0;
 }
-
 
 .career_text {
   font-size: 32px;

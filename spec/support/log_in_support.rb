@@ -5,6 +5,6 @@ module LogInSupport
     fill_in 'email', with: user.email
     fill_in 'password', with: user.password
     find('input[name="commit"]').click
-    expect(current_path).to eq "/habits.#{user.id}"
+    expect(current_path).to eq "/rules.#{user.id}"
   end
 end
