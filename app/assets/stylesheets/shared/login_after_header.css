@@ -1,46 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
-.top-page-header {
-  width: 100vw;
-  padding: 2vh 15vw;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-}
-
-.header_nav{
-  display: table;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  table-layout: fixed;
-  display:inline-block;
-}
-.header_nav li{
-  vertical-align: middle; /*この指定により上下中央になる*/
-  display: table-cell;
-  min-width: 30%;
-  }
-  .header_nav li a{
-  display: block;
-  font-weight: bold;
-  white-space: nowrap;
-  }
+/* 主にheader.cssを継承 */
 
 .action-icon {
   width: 10vw;
-}
-
-.logout_content {
-  box-sizing: border-box;
-}
-
-.login {
-  text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
 }
