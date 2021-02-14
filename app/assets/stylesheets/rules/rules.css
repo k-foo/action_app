@@ -12,3 +12,9 @@
 .point_description, li{
   text-align: left;
 }
+
+.if_then_title{
+  font-weight: bold;
+  font-size: larger;
+  border-bottom: 1px solid #333333;
+}

@@ -4,7 +4,12 @@ class RulesController < ApplicationController
   end
 
   def create
-    rule = Rule.create(rule_params)
+    @rule = Rule.new(rule_params)
+    if @rule.save
+      redirect_to habits_path
+    else
+      render 'index'
+    end
   end
 
   private

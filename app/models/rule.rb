@@ -1,5 +1,6 @@
 class Rule < ApplicationRecord
   belongs_to :user
+  belongs_to :habit, optional: true
 
   with_options length: { maximum: 12 }, presence: true do
     validates :if_1

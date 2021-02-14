@@ -3,14 +3,16 @@ class HabitsController < ApplicationController
 
   def index
     @habit = Habit.new
-    # 「カレントユーザー」かつ「習慣の合計」
+    # カレントユーザーの習慣合計を表示
     @counts = %w[count_].product(%w[1 2 3 4 5]).map(&:join).map do |clm|
       [clm, Habit.where(user_id: current_user.id, clm => 1).count]
     end.to_h
-    # 「カレントユーザー」かつ「リスタートの合計」
+    # カレントユーザーのリスタート合計を表示
     @restarts = %w[restart_].product(%w[1 2 3 4 5]).map(&:join).map do |clm|
       [clm, Habit.where(user_id: current_user.id, clm => 1).count]
     end.to_h
+    # カレントユーザーのイフゼンルールを表示
+    @rule = Rule.where(user_id: current_user.id).last
   end
 
   def new

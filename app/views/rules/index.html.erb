@@ -1,8 +1,13 @@
 <div class="contents row">
   <div class="container">
-      <h3>イフゼンルールの設定</h3>
+      <h1 class="if_then_title">イフゼンルールの設定</h1>
+      <br>
+      <p>イフゼンルールは後で編集することができるよ！</p>
+      <p>仮でもOK！カテゴリーごとに設定しよう！</p>
+      <br>
      <div class="point_description">   
-      <h4>【設定のポイント】</h4>
+      <h4>【イフゼンルールを設定するポイント】</h4>
+      <br>
       <li>限りなく小さなルールにする</li>
       <li>毎日行う習慣とセットにする</li>
       <li>「〇〇しない」ではなく「〇〇する」ルールにする</li>
@@ -26,7 +31,7 @@
       <%= f.text_field :then_2, placeholder: "例 デジタルデトックスをする", maxlength: 12 %>
       </div>
       
-      <div class="if_then_category"><h3><%= image_tag 'movement.png' , size:'35x35' %>  運動編</h3>
+      <div class="if_then_category"><h3><%= image_tag 'sport.png' , size:'35x35' %>  運動編</h3>
       <%= f.label :if_3, '運動に関するイフルール(12文字以内)' %>
       <%= f.text_field :if_3, placeholder: "例 風呂上がりに", maxlength: 12 %>
       <%= f.label :then_3, '運動に関するゼンルール(12文字以内)' %>
