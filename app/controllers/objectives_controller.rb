@@ -30,6 +30,7 @@ class ObjectivesController < ApplicationController
   def update
     objective = Objective.find(params[:id])
     objective.update(objective_params)
+    redirect_to habits_path
   end
 
   def show

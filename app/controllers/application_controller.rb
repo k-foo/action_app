@@ -2,9 +2,14 @@ class ApplicationController < ActionController::Base
   before_action :basic_auth
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  # ログイン後はイフゼンルールの設定ページへ遷移
+  # イフゼンルールが未設定であれば設定ページへ遷移し、設定済であれば習慣カウントページへ遷移する
   def after_sign_in_path_for(resource)
-    rules_path(resource)
+    @rule = Rule.find_by(user_id: resource.id)
+    if @rule.nil?
+      rules_path(resource)
+    else
+      habits_path(resource)
+    end
   end
 
   private
