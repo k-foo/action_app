@@ -1,4 +1,4 @@
-.container-chat {
+.container_chat {
   margin: 32px 200px;
   background: #B79891;
   background: -webkit-linear-gradient(to right, #94716B, #B79891);
@@ -10,53 +10,71 @@
 }
 
 /* ラジオボタン */
-.form-chat {
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-.form-chat:before,
-.form-chat:after {
-	-webkit-box-sizing: inherit;
-	        box-sizing: inherit;
-}
-
-.form-chat {
-	width: 90%;
+.form_chat {
 	margin: 2em auto;
-	text-align: left;
-	border: 1px solid #F0EBEB;
-	border-radius: 30px;
+	border-radius: 10px;
   background: #F0EBEB;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-chat input[type=radio]{
+.left_btn{
+  margin: 3px;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+}
+
+.right_btn{
+  margin: 3px;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+}
+
+#content_worry{
+  width: 230px;
+  height: 45px;
+  margin: 0;
+  border-right: 0;
+  border-radius: 2px;
+  border: 1px solid gray;
+}
+
+#submit_message{
+  width: 100px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  border-left: 0;
+  border-radius: 2px;
+  border: 1px solid gray;
+  border-left: 0;
+}
+
+.form_chat input[type=radio]{
   opacity: 0;
   height: 0;
   display: flex;
 }
 
-.form-chat label:focus,
-.form-chat label:hover,
-.form-chat label:active,
-.form-chat input:checked + label {
+.form_chat label:active,
+.form_chat input:checked + label {
 	color: #F89174;
 }
 
-.form-chat  label:focus:before,
-.form-chat  label:hover:before,
-.form-chat  label:active:before,
-.form-chat  input:checked + label:before {
+.form_chat  label:active:before,
+.form_chat  input:checked + label:before {
 	border-color: #F89174;
 }
 
-.form-chat label {
+.form_chat label {
 	font-size: 1em;
 	font-weight: bold;
 	line-height: 1;
 	position: relative;
 	display: block;
-	overflow: hidden;
 	padding: 1em 1em 1em 3em;
 	cursor: pointer;
 	-webkit-transition: all 0.15s ease;
@@ -65,7 +83,7 @@
 	text-overflow: ellipsis;
 }
 
-.form-chat label:before {
+.form_chat label:before {
 	position: absolute;
 	top: 1em;
 	left: 1em;
@@ -76,29 +94,25 @@
 	border-radius: 50%;
 }
 
-.form-chat input:checked + label:before {
+.form_chat input:checked + label:before {
 	border-color: #F89174;
 	background: #F89174;
 }
 
-.form-chat input:disabled + label {
+.form_chat input:disabled + label {
 	cursor: not-allowed;
 	color: #333333;
 	background: #efefef;
 }
 
-.form-chat input:disabled + label:hover {
-	border-color: #333333;
-}
-
-.form-chat input:disabled + label:before {
+.form_chat input:disabled + label:before {
 	border-color: #ffffff;
 	background: #ffffff;
 }
 
 /* フォーム部分 */
 input[type="text"] {
-  width: 35em;
+  /* width: 35em; */
   height: 40px;
   padding: 10px;
   margin-left: 2em;
@@ -165,19 +179,4 @@ input[type="text"] {
   top: 18px;
   right: -28px;
   border-left-color: #fff;
-}
-
-.form-area {
-  display: flex;
-  justify-content: space-around;
-}
-
-.wrapper{
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 100px;
-  /*←footerの高さ*/
-  box-sizing: border-box;
-  /*←全て含めてmin-height:100vhに*/
 }
