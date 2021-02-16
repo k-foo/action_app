@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
         @user.password_confirmation = '1234567891011121311415abc'
         expect(@user).to be_valid
       end
-      it 'ニックネームが15字以下であれば登録できる' do
+      it 'ニックネームが10字以下であれば登録できる' do
         @user.nickname = 'ピカちゅう'
         expect(@user).to be_valid
       end
@@ -27,10 +27,10 @@ RSpec.describe User, type: :model do
         # binding.pry
         expect(@user.errors.full_messages).to include('ニックネームを入力してください')
       end
-      it 'ニックネームが15字を超えると保存できない' do
+      it 'ニックネームが10字を超えると保存できない' do
         @user.nickname = 'ピチューピカチュウライチュー１２３'
         @user.valid?
-        expect(@user.errors.full_messages).to include('ニックネームは15文字以内で入力してください')
+        expect(@user.errors.full_messages).to include('ニックネームは10文字以内で入力してください')
       end
       it 'メールアドレスが空欄だと保存できない' do
         @user.email = ''
