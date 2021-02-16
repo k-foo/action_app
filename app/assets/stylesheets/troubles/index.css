@@ -1,5 +1,5 @@
 .container_chat {
-  margin: 32px 200px;
+  margin: 32px 100px;
   background: #B79891;
   background: -webkit-linear-gradient(to right, #94716B, #B79891);
   background: linear-gradient(to right, #94716B, #B79891);
@@ -112,7 +112,7 @@
 
 /* フォーム部分 */
 input[type="text"] {
-  /* width: 35em; */
+  width: 35em;
   height: 40px;
   padding: 10px;
   margin-left: 2em;
@@ -179,4 +179,14 @@ input[type="text"] {
   top: 18px;
   right: -28px;
   border-left-color: #fff;
+}
+
+.wrapper{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 100px;
+  /*←footerの高さ*/
+  box-sizing: border-box;
+  /*←全て含めてmin-height:100vhに*/
 }

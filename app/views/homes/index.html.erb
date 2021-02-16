@@ -1,5 +1,82 @@
 <div class="wrapper">
   <%= render "shared/header" %>
-  アプリ紹介（後で実装）
+  
+  <div class="main_image">
+    <%= image_tag "action.png",id:"action-img" %>
+  </div>
+  <h2 class="second_title">こんなあなたにおすすめ！</h2>
+  <div class="second_colum">
+    <div class="target">
+      <%= image_tag "target.png",id:"pass-logo", :size =>'50x50' %>
+      <h4 class="target_text">成長したい方</h4>
+      <p>毎日コツコツと良いことを継続して、<br>成長したい。<p>
+    </div>
+    <div class="target">
+      <%= image_tag "target.png",id:"pass-logo", :size =>'50x50' %>
+      <h4 class="target_text">自己肯定感を高めたい方</h4>
+      <p>自分の弱さを受け入れて、<br>前に進みたい。<p>
+    </div>
+    <div class="target">
+      <%= image_tag "target.png",id:"pass-logo", :size =>'50x50' %>
+      <h4 class="target_text">目標をふりかえりたい方</h4>
+      <p>立てた目標を<br>オンラインで見返したい。<p>
+    </div>
+    </div>
+    <div class="third_colum">
+      <%= image_tag "possible.png",id:"possible-img" %>
+    </div>
+    <div class="possible_colum_1">
+      <div class="detail_description">
+      <h4 class="possible_text">イフゼンルール設定</h4>
+      <p>まずはじめにイフゼンルール(※1)設定しよう。</p>
+      <p>食事・睡眠・運動・学び・マインドのカテゴリーごとに１つずつ登録。</p>
+      <p>「いつ」「何を」行うか、小さく設定することで習慣化につながる。</p>
+      <br><br>
+      <p id="supplement">（※１）イフゼンルールとは？<p>
+      <p id="supplement">イフ＝〇〇の状況になったら ゼン＝〇〇するとルールを決めること。<p>
+      <p id="supplement">状況と行動をセットにすると人間の脳が理解しやすくなる性質を利用したテクニック。<p>
+      </div>
+      <div class="demo_image">
+        <%# 画像 %>
+      </div>
+    </div>
+    <div class="possible_colum_2">
+      <div class="demo_image">
+        <%# 画像 %>
+      </div>
+      <div class="detail_description">
+      <h4 class="possible_text">目標設定</h4>
+      <p>目標達成率２倍！WOOPの法則（※２）で目標を設定しよう。</p>
+      <p>短期・中期・長期のスパンごとに設定。</p>
+      <p>いつどんな目標を立てていたのか、見返すことが出来る。</p>
+      <br>
+      <p id="supplement">（※２）WOOPの法則とは？<p>
+      <p id="supplement">「Wish（願い）」「Outcome（結果）」「Obstacle（障害）」「Plan（計画）」の頭文字をとったもの。<p>
+      <p id="supplement">アメリカの心理学者ガブリエル・エッティンゲン博士が提唱。<p>
+      <p id="supplement">目標達成までの道のりで起こる障害、それを乗り越える計画も合わせて考えることにより目標達成率を高められる。<p>
+      </div>
+    </div>
+    <div class="possible_colum_3">
+      <div class="detail_description">
+      <h4 class="possible_text">習慣カウント</h4>
+      <p>５つのカテゴリーごとに継続したいことをカウントする機能。</p>
+      <p>SAVEのボタンのワンクリックで、実施回数を記録。</p>
+      <p>良い継続が途切れた後、再開できた回数もカウント出来る。</p>
+      </div>
+      <div class="demo_image">
+        <%# 画像 %>
+      </div>
+    </div>
+    <div class="possible_colum_4">
+      <div class="demo_image">
+        <%# 画像 %>
+      </div>
+      <div class="detail_description">
+      <h4 class="possible_text">セルフコンパッション</h4>
+      <p>対話調で、自分を励ますことが出来る機能。</p>
+      <p>上手くいかない時でも、弱い自分を受け入れることによって前進しよう。</p>
+      <p>当時どんなことに悩んでいたのかの記録にもつながる。</p>
+      </div>
+  </div>
   <%= render "shared/footer" %>
 </div>
