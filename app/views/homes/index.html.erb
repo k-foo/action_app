@@ -29,20 +29,20 @@
       <div class="detail_description">
       <h4 class="possible_text">イフゼンルール設定</h4>
       <p>まずはじめにイフゼンルール(※1)設定しよう。</p>
-      <p>食事・睡眠・運動・学び・マインドのカテゴリーごとに１つずつ登録。</p>
-      <p>「いつ」「何を」行うか、小さく設定することで習慣化につながる。</p>
+      <p>食事・睡眠・運動・学び・マインドについて１つずつ登録。</p>
+      <p>いつ・何を行うか小さく設定することで習慣化につながる。</p>
       <br><br>
       <p id="supplement">（※１）イフゼンルールとは？<p>
-      <p id="supplement">イフ＝〇〇の状況になったら ゼン＝〇〇するとルールを決めること。<p>
+      <p id="supplement">「イフ＝〇〇の状況になったら」「ゼン＝〇〇する」とルールを決めること。<p>
       <p id="supplement">状況と行動をセットにすると人間の脳が理解しやすくなる性質を利用したテクニック。<p>
       </div>
       <div class="demo_image">
-        <%# 画像 %>
+        <%= image_tag "desctiption1.png",id:"desctiption-img" %>
       </div>
     </div>
     <div class="possible_colum_2">
       <div class="demo_image">
-        <%# 画像 %>
+        <%= image_tag "desctiption2.png",id:"desctiption-img" %>
       </div>
       <div class="detail_description">
       <h4 class="possible_text">目標設定</h4>
@@ -64,19 +64,22 @@
       <p>良い継続が途切れた後、再開できた回数もカウント出来る。</p>
       </div>
       <div class="demo_image">
-        <%# 画像 %>
+        <%= image_tag "desctiption3.png",id:"desctiption-img" %>
       </div>
     </div>
     <div class="possible_colum_4">
       <div class="demo_image">
-        <%# 画像 %>
+        <%= image_tag "desctiption4.png",id:"desctiption-img" %>
       </div>
       <div class="detail_description">
       <h4 class="possible_text">セルフコンパッション</h4>
       <p>対話調で、自分を励ますことが出来る機能。</p>
-      <p>上手くいかない時でも、弱い自分を受け入れることによって前進しよう。</p>
+      <p>上手くいかない時でも、弱い自分を受け入れて前進しよう。</p>
       <p>当時どんなことに悩んでいたのかの記録にもつながる。</p>
       </div>
+  </div>
+  <div class="btn_registration" id="btn_registration">
+    <%= link_to "新規登録する（無料）", new_user_registration_path, class: 'btn_registration' %>
   </div>
   <%= render "shared/footer" %>
 </div>
