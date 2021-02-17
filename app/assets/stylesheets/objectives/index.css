@@ -697,18 +697,6 @@ form input[type="submit"] {
   transition-timing-function: linear;
 }
 
-.btn,
-header.header div.header__bar.row div.grid-6 a.post {
-  padding: 8px 20px;
-  font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 3px;
-  display: inline-block;
-}
-
 .btn:hover,
 header.header div.header__bar.row div.grid-6 a.post:hover {
   border-color: #9bdbf2;
@@ -856,7 +844,6 @@ div.contents.row div.content_post {
   margin: 20px 0;
   padding: 30px;
   position: relative;
-  width:  700px;
   min-height: 80%;
   color:#333333;
   font-family: "UD Digi Kyokasho NK-B";
@@ -1071,9 +1058,11 @@ footer p {
   /*←全て含めてmin-height:100vhに*/
 }
 
-.pen-icon {
+.btn.pen_icon{
+  float: left;
   width: 80px;
   height: 80px;
-  margin-left: 500px;
-  margin-top: 20px;
+  margin: 20px 0px 0px 200px;
+  text-align: center;
+  padding: 2px;
 }

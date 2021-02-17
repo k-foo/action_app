@@ -1,12 +1,14 @@
-<header class='top-page-header'>
-  <nav>
-    <ul class="header_nav">
-      <li class=”current”><%= link_to image_tag("icon.png", class:"action-icon"), habits_path %></li>
-      <li><%= link_to  objectives_path, class: "btn objectives_page" do %> <%= image_tag "goal.png", size:'24x24'%>目標設定<br>(WOOPの法則)<% end %></li>
-      <li><%= link_to  habits_path, class: "btn rules_page" do %> <%= image_tag "rules.png", size:'24x24'%>習慣カウント<br>(イフゼンルール)<% end %></li>
-      <li><%= link_to  troubles_path, class: "btn troubles_page" do %> <%= image_tag "care.png", size:'24x24'%>セルフ<br>コンパッション<% end %></li>
-      <li class="logout_content""><%= link_to destroy_user_session_path, method: :delete, class: "btn logout_page" do %><%= image_tag "logout.png", size:'24x24'%>ログアウト<% end %></li>
-      <li><%= "#{current_user.nickname}"%></li>
-    </ul>
-  </nav>
+<header class='top_page_header'>
+    <div class='left_menu'>
+      <%= link_to image_tag("icon.png", class:"action-icon"), habits_path %>
+      <%= "#{current_user.nickname}さんのページ"%>
+    </div>
+    <div class='right_menu'>
+      <ul>
+        <li><%= link_to  objectives_path, class: "btn objectives_page" do %> <%= image_tag "goal.png", size:'24x24'%>目標設定(WOOPの法則)<% end %></li>
+        <li><%= link_to  habits_path, class: "btn rules_page" do %> <%= image_tag "rules.png", size:'24x24'%>習慣カウント(イフゼンルール)<% end %></li>
+        <li><%= link_to  troubles_path, class: "btn troubles_page" do %> <%= image_tag "care.png", size:'24x24'%>セルフコンパッション<% end %></li>
+        <li class="logout_content""><%= link_to destroy_user_session_path, method: :delete, class: "btn logout_page" do %><%= image_tag "logout.png", size:'24x24'%>ログアウト<% end %></li>
+      </ul>
+    </div> 
 </header>

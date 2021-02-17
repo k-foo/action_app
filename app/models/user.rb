@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_one  :rule
 
   with_options presence: true do
-    validates :nickname, uniqueness: true, length: { maximum: 15 }
+    validates :nickname, length: { maximum: 10 }
     validates :birthdate
     # @含むこと・存在することはdeviseのデフォルト実装のため省略
     validates :email, uniqueness: true

@@ -1,6 +1,5 @@
 <div class="wrapper">
   <%= render "shared/login_after_header" %>
-
   <%= form_with(model: @habit, local: true) do |f| %>
       <div class="save_center_content"><%= f.submit "S A V E" , class:"save_center", id:"save_center"%></div>
       <div class="save_setting_content"><%= link_to edit_rule_path(@rule.id), method: :get, class:"setting_center", id:"setting_center" do %><%= image_tag "setting.png", size:'24x24'%>イフゼンルールの編集<% end %></div>

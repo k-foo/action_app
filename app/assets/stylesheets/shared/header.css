@@ -2,39 +2,31 @@
   box-sizing: border-box;
 }
 
-.top-page-header {
-  width: 100vw;
-  padding: 2vh 15vw;
-  display: flex;
-  flex-direction: column;
+/* ヘッダー全体 */
+.top_page_header {
   background-color: #fff;
+  height: 80px;
 }
 
-.nav-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 1vh 0;
+/* 左のヘッダー */
+.left_menu{
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
-.lists-left {
-  display: flex;
-  min-width: 200px;
-  justify-content: center;
+/* 右のヘッダー */
+.right_menu li{
+  display: inline-block;
 }
 
-.lists-right {
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-
-.sign-up {
-  text-decoration: none;
+.right_menu li a{
+  font-weight: bold;
   color: #333333;
+  padding: 20px;
 }
 
-.user-info{
-  justify-content: center;
+.right_menu{
+  text-align: right;
+  padding-top: 25px;
 }
