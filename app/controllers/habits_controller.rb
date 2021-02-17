@@ -19,7 +19,11 @@ class HabitsController < ApplicationController
   end
 
   def create
-    habit = Habit.create(habit_params)
+    @habit = Habit.new(habit_params)
+    if @habit.save
+      redirect_to habits_path
+    else
+    end
   end
 
   private
