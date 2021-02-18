@@ -18,7 +18,7 @@ function post() {
       const HTML_trouble= `
       <li class="message-left-side">
         <div class="pic-chat">
-          <img src="/assets/sad.png" alt="落ち込んでいる画像">
+          <img src="images/sad.png" alt="落ち込んでいる画像">
         </div>
         <div class="text-chat">
         <div class="post-content">
