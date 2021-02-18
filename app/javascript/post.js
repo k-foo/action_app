@@ -18,7 +18,7 @@ function post() {
       const HTML_trouble= `
       <li class="message-left-side">
         <div class="pic-chat">
-          <img src="images/sad.png" alt="落ち込んでいる画像">
+          <img src="/sad.png" alt="落ち込んでいる画像">
         </div>
         <div class="text-chat">
         <div class="post-content">
@@ -35,7 +35,7 @@ function post() {
       const HTML_encouragement= `
       <li class="message-right-side">
         <div class="pic-chat">
-          <img src="/assets/kind.png" alt="励ましている画像">
+          <img src="/kind.png" alt="励ましている画像">
         </div>
         <div class="text-chat">
         <div class="post-content">
