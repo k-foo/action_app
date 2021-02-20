@@ -20,10 +20,7 @@ class HabitsController < ApplicationController
 
   def create
     @habit = Habit.new(habit_params)
-    if @habit.save
-      redirect_to habits_path
-    else
-    end
+    redirect_to habits_path if @habit.save
   end
 
   private
