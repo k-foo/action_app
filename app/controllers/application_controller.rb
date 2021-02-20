@@ -14,11 +14,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # ログアウト後はルートパスとする（この設定をしないと新規登録者に対してログインを求めてしまうため）
-  def after_sign_out_path_for(_resource_or_scope)
-    root_path
-  end
-
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
       username == ENV['BASIC_AUTH_USER'] && password == ENV['BASIC_AUTH_PASSWORD']
