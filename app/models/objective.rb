@@ -3,8 +3,6 @@ class Objective < ApplicationRecord
   belongs_to :user
   belongs_to_active_hash :category
 
-  has_many :encouragements
-
   with_options presence: true do
     validates :title
     validates :category_id
