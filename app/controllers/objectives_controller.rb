@@ -1,7 +1,6 @@
 class ObjectivesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_objective, only: [:edit, :show]
-  before_action :set_objective_local, only: [:destroy, :update]
+  before_action :set_objective, only: [:edit, :show,:destroy, :update]
 
   def index
     @objectives = current_user.objectives.all.order(created_at: :desc)
@@ -21,15 +20,14 @@ class ObjectivesController < ApplicationController
   end
 
   def destroy
-    objective.destroy
+    @objective.destroy
   end
 
   def edit
   end
 
   def update
-    objective.update(objective_params)
-    redirect_to habits_path
+    @objective.update(objective_params)
   end
 
   def show
@@ -45,7 +43,4 @@ class ObjectivesController < ApplicationController
     @objective = current_user.objectives.find(params[:id])
   end
 
-  def set_objective_local
-    objective = current_user.objective.find(params[:id])
-  end
 end
