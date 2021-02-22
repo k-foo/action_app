@@ -9,98 +9,98 @@ RSpec.describe Rule, type: :model do
       it '全ての入力事項を、入力していると登録できる' do
         expect(@rule).to be_valid
       end
-      it '「食事」のイフルールが12文字以内の場合には登録できる' do
+      it '「食事」のイフルールが20文字以内の場合には登録できる' do
         @rule.if_1 = '夕食後に'
         expect(@rule).to be_valid
       end
-      it '「食事」のゼンルールが12文字以内の場合には登録できる' do
+      it '「食事」のゼンルールが20文字以内の場合には登録できる' do
         @rule.then_1 = '〇〇する'
         expect(@rule).to be_valid
       end
-      it '「睡眠」のイフルールが12文字以内の場合には登録できる' do
+      it '「睡眠」のイフルールが20文字以内の場合には登録できる' do
         @rule.if_2 = '夕食後に'
         expect(@rule).to be_valid
       end
-      it '「睡眠」のゼンルールが12文字以内の場合には登録できる' do
+      it '「睡眠」のゼンルールが20文字以内の場合には登録できる' do
         @rule.then_2 = '〇〇する'
         expect(@rule).to be_valid
       end
-      it '「運動」のイフルールが12文字以内の場合には登録できる' do
+      it '「運動」のイフルールが20文字以内の場合には登録できる' do
         @rule.if_3 = '夕食後に'
         expect(@rule).to be_valid
       end
-      it '「運動」のゼンルールが12文字以内の場合には登録できる' do
+      it '「運動」のゼンルールが20文字以内の場合には登録できる' do
         @rule.then_3 = '〇〇する'
         expect(@rule).to be_valid
       end
-      it '「学び」のイフルールが12文字以内の場合には登録できる' do
+      it '「学び」のイフルールが20文字以内の場合には登録できる' do
         @rule.if_4 = '夕食後に'
         expect(@rule).to be_valid
       end
-      it '「学び」のゼンルールが12文字以内の場合には登録できる' do
+      it '「学び」のゼンルールが20文字以内の場合には登録できる' do
         @rule.then_4 = '〇〇する'
         expect(@rule).to be_valid
       end
-      it '「マインド」のイフルールが12文字以内の場合には登録できる' do
+      it '「マインド」のイフルールが20文字以内の場合には登録できる' do
         @rule.if_5 = '夕食後に'
         expect(@rule).to be_valid
       end
-      it '「マインド」のゼンルールが12文字以内の場合には登録できる' do
+      it '「マインド」のゼンルールが20文字以内の場合には登録できる' do
         @rule.then_5 = '〇〇する'
         expect(@rule).to be_valid
       end
     end
 
     context 'イフゼンルールの保存ができないとき' do
-      it '「食事」のイフルールが13文字以上の場合には保存できない' do
-        @rule.if_1 = '１３文字以上のイフルールを設定'
+      it '「食事」のイフルールが21文字以上の場合には保存できない' do
+        @rule.if_1 = '21文字以上のイフルールを設定 〇〇したら'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「食事に関するイフルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「食事に関するイフルール」は20文字以内で入力してください')
       end
-      it '「食事」のゼンルールが13文字以上の場合には保存できない' do
-        @rule.then_1 = '１３文字以上のゼンルールを設定'
+      it '「食事」のゼンルールが21文字以上の場合には保存できない' do
+        @rule.then_1 = '21文字以上のゼンルールを設定 〇〇〇〇する'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「食事に関するゼンルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「食事に関するゼンルール」は20文字以内で入力してください')
       end
-      it '「睡眠」のイフルールが13文字以上の場合には保存できない' do
-        @rule.if_2 = '１３文字以上のイフルールを設定'
+      it '「睡眠」のイフルールが21文字以上の場合には保存できない' do
+        @rule.if_2 = '21文字以上のイフルールを設定 〇〇したら'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「睡眠に関するイフルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「睡眠に関するイフルール」は20文字以内で入力してください')
       end
-      it '「睡眠」のゼンルールが13文字以上の場合には保存できない' do
-        @rule.then_2 = '１３文字以上のゼンルールを設定'
+      it '「睡眠」のゼンルールが21文字以上の場合には保存できない' do
+        @rule.then_2 = '21文字以上のゼンルールを設定 〇〇〇〇する'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「睡眠に関するゼンルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「睡眠に関するゼンルール」は20文字以内で入力してください')
       end
-      it '「運動」のイフルールが13文字以上の場合には保存できない' do
-        @rule.if_3 = '１３文字以上のイフルールを設定'
+      it '「運動」のイフルールが21文字以上の場合には保存できない' do
+        @rule.if_3 = '21文字以上のイフルールを設定 〇〇したら'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「運動に関するイフルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「運動に関するイフルール」は20文字以内で入力してください')
       end
-      it '「運動」のゼンルールが13文字以上の場合には保存できない' do
-        @rule.then_3 = '１３文字以上のゼンルールを設定'
+      it '「運動」のゼンルールが21文字以上の場合には保存できない' do
+        @rule.then_3 = '21文字以上のゼンルールを設定 〇〇〇〇する'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「運動に関するゼンルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「運動に関するゼンルール」は20文字以内で入力してください')
       end
-      it '「学び」のイフルールが13文字以上の場合には保存できない' do
-        @rule.if_4 = '１３文字以上のイフルールを設定'
+      it '「学び」のイフルールが21文字以上の場合には保存できない' do
+        @rule.if_4 = '21文字以上のイフルールを設定 〇〇したら'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「学びに関するイフルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「学びに関するイフルール」は20文字以内で入力してください')
       end
-      it '「学び」のゼンルールが13文字以上の場合には保存できない' do
-        @rule.then_4 = '１３文字以上のゼンルールを設定'
+      it '「学び」のゼンルールが21文字以上の場合には保存できない' do
+        @rule.then_4 = '21文字以上のゼンルールを設定 〇〇〇〇する'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「学びに関するゼンルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「学びに関するゼンルール」は20文字以内で入力してください')
       end
-      it '「マインド」のイフルールが13文字以上の場合には保存できない' do
-        @rule.if_5 = '１３文字以上のイフルールを設定'
+      it '「マインド」のイフルールが21文字以上の場合には保存できない' do
+        @rule.if_5 = '21文字以上のイフルールを設定 〇〇したら'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「マインドに関するイフルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「マインドに関するイフルール」は20文字以内で入力してください')
       end
-      it '「マインド」のゼンルールが13文字以上の場合には保存できない' do
-        @rule.then_5 = '１３文字以上のゼンルールを設定'
+      it '「マインド」のゼンルールが21文字以上の場合には保存できない' do
+        @rule.then_5 = '21文字以上のゼンルールを設定 〇〇〇〇する'
         @rule.valid?
-        expect(@rule.errors.full_messages).to include('「マインドに関するゼンルール」は12文字以内で入力してください')
+        expect(@rule.errors.full_messages).to include('「マインドに関するゼンルール」は20文字以内で入力してください')
       end
 
       it '「食事」のイフルールが空の場合には保存できない' do
