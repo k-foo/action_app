@@ -18,6 +18,13 @@
   padding-bottom: 0;
  }
 
+ #setting_center{
+	 display: flex;
+	 justify-content: center;
+	 text-align: center;
+	 margin: 0 auto;
+ }
+
  /* イフゼンルール下の余白 */
  .rule_text_content{
 	 margin-bottom: 1rem;
