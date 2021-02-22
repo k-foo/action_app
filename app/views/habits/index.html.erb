@@ -14,9 +14,9 @@
             <%= f.label :restart_1, 'restart!', class: "label_restart_1" %>
           </div>
         </ul>
-          <div>
-            <p><%= @rule.if_1 %></p>
-            <p><%= @rule.then_1 %></p>
+          <div class="rule_text_content">
+            <p class="rule_text"><%= @rule.if_1 %></p>
+            <p class="rule_text"><%= @rule.then_1 %></p>
           </div>
       </div>
       <div class="habit2_content">
@@ -29,9 +29,9 @@
             <%= f.label :restart_2, 'restart!', class: "label_restart_2" %>
           </div>
         </ul>
-          <div>
-            <p><%= @rule.if_2 %></p>
-            <p><%= @rule.then_2 %></p>
+          <div class="rule_text_content">
+            <p class="rule_text"><%= @rule.if_2 %></p>
+            <p class="rule_text"><%= @rule.then_2 %></p>
           </div>
       </div>
       <div class="habit3_content">
@@ -44,9 +44,9 @@
             <%= f.label :restart_3, 'restart!', class: "label_restart_3" %>
           </div>
         </ul>
-          <div>
-            <p><%= @rule.if_3 %></p>
-            <p><%= @rule.then_3 %></p>
+          <div class="rule_text_content">
+            <p class="rule_text"><%= @rule.if_3 %></p>
+            <p class="rule_text"><%= @rule.then_3 %></p>
           </div>
       </div>
       <div class="habit4_content">
@@ -59,13 +59,13 @@
             <%= f.label :restart_4, 'restart!', class: "label_restart_4" %>
           </div>
         </ul>
-          <div>
-            <p><%= @rule.if_4 %></p>
-            <p><%= @rule.then_4 %></p>
+          <div class="rule_text_content">
+            <p class="rule_text"><%= @rule.if_4 %></p>
+            <p class="rule_text"><%= @rule.then_4 %></p>
           </div>
       </div>
       <div class="habit5_content">
-        <ul><h1 class="text_habit">マインド</h1>
+        <ul><h1 class="text_habit" id="mind_text">マインド</h1>
           <div class="habit5_content_count">
             <%= f.check_box :count_5, checked: true, class: "count_5" %>
             <%= f.label :count_5, 'done!', class: "label_count_5" %>
@@ -74,9 +74,9 @@
             <%= f.label :restart_5, 'restart!', class: "label_restart_5" %>
           </div>
         </ul>
-          <div>
-            <p><%= @rule.if_5 %></p>
-            <p><%= @rule.then_5 %></p>
+          <div class="rule_text_content">
+            <p class="rule_text"><%= @rule.if_5 %></p>
+            <p class="rule_text"><%= @rule.then_5 %></p>
           </div>
       </div>
     </div>

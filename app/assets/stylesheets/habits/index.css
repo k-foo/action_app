@@ -17,17 +17,24 @@
   padding-top: 0;
   padding-bottom: 0;
  }
- 
+
+ /* イフゼンルール下の余白 */
+ .rule_text_content{
+	 margin-bottom: 1rem;
+ }
+
 .habit1_content, .habit2_content, .habit3_content, .habit4_content, .habit5_content{
   width: 240px;
-  height: 240px;
+	/* イフゼンルールを要素内に収めるため */
+  height: 295px;
+	padding-bottom: 15px;
   border-radius: 50px;
   background: linear-gradient(145deg,  #F0EBEB,  #F0EBEB);
   box-shadow:  17px 17px 34px #b5b5b5,
               -17px -17px 34px #ffffff;
   text-align: center;
  }
-            
+
 .rule1_content, .rule2_content{
   width: 165px;
 	height: 165px;
@@ -45,10 +52,12 @@
 	display: flex;
 	justify-content: space-around;
 	padding: 15px;
+	padding-top: 5px;
 } 
 
+/* 食事・睡眠・運動・学び・マインドの文字部分 */
 .text_habit {
-  font-size: 20px;
+  font-size: 1.2rem;
   position: relative;
   display: inline-block;
   padding: 0 55px;
@@ -73,17 +82,62 @@
   right: 0;
 }
 
+/* タブレットサイズ以下の場合 */
+@media (max-width: 1024px){
+	.text_habit {
+		font-size: 0.8rem;
+		position: relative;
+		display: inline-block;
+		padding: 0 20px;
+	}
+	
+	.text_habit:before, .text_habit:after {
+		display: none;
+	}	
+
+/* ”マインド”だけ文字数が多く崩れるため調整 */
+#mind_text{
+		font-size: 0.6rem;
+	}
+}
+
+/* 通算回数の文字調整 */
 .career_text {
-  font-size: 32px;
+	font-size: 1.5rem;
   font-style: italic;
   line-height: 1.5;
   letter-spacing: 0.12em;
+	font-weight: bolder;
 }
 
-/* セーブボタン */
+/* リスタート回数の文字調整 */
+.restart_text{
+	font-size: 1rem;
+	font-style: italic;
+	line-height: 1.5rem;
+	letter-spacing: 0.12em;
+	font-weight: bolder;
+}
+
+/* スマホサイズ以下の場合 */
+@media (max-width: 599px){
+	.career_text{
+		font-size: 1.0rem;
+	} 
+	.restart_text{
+		font-size: 0.5rem;
+	}
+}
+
+/* セーブボタンの部分 */
 .save_center_content {
+	width: 100%;
   display: flex;
   justify-content: center;
+	text-align: center;
+	min-width: 100px;
+	min-height: 50px;
+	margin: auto;
 }
 
 .save_center {
@@ -102,10 +156,18 @@
 .habit1_content_count, .habit2_content_count, .habit3_content_count, .habit4_content_count ,.habit5_content_count{
   width: 90%;
 	margin: 1em auto;
+	margin-top: 0;
 }
 
 .label_count_1, .label_restart_1,.label_count_2, .label_restart_2, .label_count_3, .label_restart_3,.label_count_4, .label_restart_4,.label_count_5, .label_restart_5{
   vertical-align: 0.8em;
+}
+
+/* スマホサイズ以下の場合はdone、restartを小さくする */
+@media (max-width: 599px){
+	.label_count_1, .label_restart_1,.label_count_2, .label_restart_2, .label_count_3, .label_restart_3,.label_count_4, .label_restart_4,.label_count_5, .label_restart_5{
+		font-size: 0.5rem;
+	}
 }
 
 .habit1_content_count .count_1, .restart_1, .count_2, .restart_2, .count_3, .restart_3, .count_4, .restart_4, .count_5, .restart_5{
@@ -199,7 +261,7 @@
 
 /* 食事 */
 .habit1_content_count .count_1:checked::before{
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -210,7 +272,7 @@
 }
 
 .habit1_content_count .restart_1:checked::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -222,7 +284,7 @@
 
 /* 睡眠 */
 .habit2_content_count .count_2:checked::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -233,7 +295,7 @@
 }
 
 .habit2_content_count .restart_2:checked::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -245,7 +307,7 @@
 
 /* 運動 */
 .habit3_content_count .count_3:checked::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -256,7 +318,7 @@
 }
 
 .habit3_content_count .restart_3:checked::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -268,7 +330,7 @@
 
 /* 学び */
 .habit4_content_count .count_4:checked::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -279,7 +341,7 @@
 }
 
 .habit4_content_count .restart_4:checked::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -291,7 +353,7 @@
 
 /* マインド */
 .habit5_content_count .count_5:checked::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -302,7 +364,7 @@
 }
 
 .habit5_content_count .restart_5:checked::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -334,7 +396,7 @@
 }
 
 .habit1_content_count .count_1 .restart_1 .habit2_content_count .count_2 .restart_2 .habit3_content_count .count_3 .restart_3 .habit4_content_count .count_4 .restart_4 .habit5_content_count .count_5 .restart_5:disabled::before {
-  font-size: 20px;
+  font-size: 1.2rem;
 	line-height: 30px;
 	position: absolute;
 	display: inline-block;
@@ -342,4 +404,16 @@
 	height: 30px;
 	content: '✖︎';
 	text-align: center;
+}
+
+/* イフゼンルールの文字部分 */
+.rule_text{
+	font-size: 1.2rem;
+	word-break : break-all;
+}
+
+@media (max-width: 1024px){
+	.rule_text{
+		font-size: 0.3rem;
+	}
 }
