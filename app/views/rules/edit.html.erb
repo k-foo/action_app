@@ -18,40 +18,45 @@
     <%= form_with(model: @rule, local: true) do |f| %>
     <%# インスタンスを渡して、エラー発生時にメッセージを表示 %>
     <%= render 'shared/error_messages', model: f.object %>
-      <div class="if_then_category"><h3><%= image_tag 'meal.png' , size:'35x35' %>  食事編</h3>
-      <%= f.label :if_1, '食事に関するイフルール(20文字以内)' %>
-      <%= f.text_field :if_1, placeholder: "例 仕事帰りに", maxlength: 20 %>
-      <%= f.label :then_1, '食事に関するゼンルール(20文字以内)' %>
-      <%= f.text_field :then_1, placeholder: "例 カットサラダを1袋購入", maxlength: 20 %>
+      <div class="if_then_category">
+      <div><h3><%= image_tag 'meal.png' , size:'35x35' %>  食事編</h3></div>
+      <div><%= f.label :if_1, '食事に関するイフルール(20文字以内)' %></div>
+      <div><%= f.text_field :if_1, placeholder: "例 仕事帰りに", maxlength: 20 , id: "if_then_text_box" %></div>
+      <div><%= f.label :then_1, '食事に関するゼンルール(20文字以内)' %></div>
+      <div><%= f.text_field :then_1, placeholder: "例 カットサラダを1袋購入", maxlength: 20, id: "if_then_text_box" %></div>
       </div>
 
-      <div class="if_then_category"><h3><%= image_tag 'sleep.png' , size:'35x35' %>  睡眠編</h3>
-      <%= f.label :if_2, '睡眠に関するイフルール(20文字以内)' %>
-      <%= f.text_field :if_2, placeholder: "例 寝る1時間前から", maxlength: 20 %>
-      <%= f.label :then_2, '睡眠に関するゼンルール(20文字以内)' %>
-      <%= f.text_field :then_2, placeholder: "例 デジタルデトックスをする", maxlength: 20 %>
+      <div class="if_then_category">
+      <div><h3><%= image_tag 'sleep.png' , size:'35x35' %>  睡眠編</h3></div>
+      <div><%= f.label :if_2, '睡眠に関するイフルール(20文字以内)' %></div>
+      <div><%= f.text_field :if_2, placeholder: "例 寝る1時間前から", maxlength: 20, id: "if_then_text_box" %></div>
+      <div><%= f.label :then_2, '睡眠に関するゼンルール(20文字以内)' %></div>
+      <div><%= f.text_field :then_2, placeholder: "例 デジタルデトックスをする", maxlength: 20, id: "if_then_text_box" %></div>
       </div>
 
-      <div class="if_then_category"><h3><%= image_tag 'sport.png' , size:'35x35' %>  運動編</h3>
-      <%= f.label :if_3, '運動に関するイフルール(20文字以内)' %>
-      <%= f.text_field :if_3, placeholder: "例 風呂上がりに", maxlength: 20 %>
-      <%= f.label :then_3, '運動に関するゼンルール(20文字以内)' %>
-      <%= f.text_field :then_3, placeholder: "例 スクワット10回", maxlength: 20 %>
+      <div class="if_then_category">
+      <div><h3><%= image_tag 'sport.png' , size:'35x35' %>  運動編</h3></div>
+      <div><%= f.label :if_3, '運動に関するイフルール(20文字以内)' %></div>
+      <div><%= f.text_field :if_3, placeholder: "例 風呂上がりに", maxlength: 20, id: "if_then_text_box" %></div>
+      <div><%= f.label :then_3, '運動に関するゼンルール(20文字以内)' %></div>
+      <div><%= f.text_field :then_3, placeholder: "例 スクワット10回", maxlength: 20, id: "if_then_text_box" %></div>
       </div>
 
-      <div class="if_then_category"><h3><%= image_tag 'learning.png' , size:'35x35' %>  学び編</h3>
-      <%= f.label :if_4, '学びに関するイフルール(20文字以内)' %>
-      <%= f.text_field :if_4, placeholder: "例 朝起きたら", maxlength: 20 %>
-      <%= f.label :then_4, '学びに関するゼンルール(20文字以内)' %>
-      <%= f.text_field :then_4, placeholder: "例 macを開き15分勉強", maxlength: 20 %>
+      <div class="if_then_category">
+      <div><h3><%= image_tag 'learning.png' , size:'35x35' %>  学び編</h3></div>
+      <div><%= f.label :if_4, '学びに関するイフルール(20文字以内)' %></div>
+      <div><%= f.text_field :if_4, placeholder: "例 朝起きたら", maxlength: 20, id: "if_then_text_box" %></div>
+      <div><%= f.label :then_4, '学びに関するゼンルール(20文字以内)' %></div>
+      <div><%= f.text_field :then_4, placeholder: "例 macを開き15分勉強", maxlength: 20, id: "if_then_text_box" %></div>
       </div>
 
-      <div class="if_then_category"><h3><%= image_tag 'mind.png' , size:'35x35' %>  マインド編</h3>
-      <%= f.label :if_5, 'マインドに関するイフルール(20文字以内)' %>
-      <%= f.text_field :if_5, placeholder: "例 夕食後に", maxlength: 20 %>
-      <%= f.label :then_5, 'マインドに関するゼンルール(20文字以内)' %>
-      <%= f.text_field :then_5, placeholder: "例 20分間感情を紙に書き出す", maxlength: 20 %>
-      <%= f.submit "編集を保存する" %>
+      <div class="if_then_category">
+      <div><h3><%= image_tag 'mind.png' , size:'35x35' %>  マインド編</h3></div>
+      <div><%= f.label :if_5, 'マインドに関するイフルール(20文字以内)' %></div>
+      <div><%= f.text_field :if_5, placeholder: "例 夕食後に", maxlength: 20 , id: "if_then_text_box"%></div>
+      <div><%= f.label :then_5, 'マインドに関するゼンルール(20文字以内)' %></div>
+      <div><%= f.text_field :then_5, placeholder: "例 20分間感情を紙に書き出す", maxlength: 20, id: "if_then_text_box" %></div>
+      <div><%= f.submit "編集を保存する", id: "if_then_text_submit" %></div>
       </div>
 
     <% end %>
