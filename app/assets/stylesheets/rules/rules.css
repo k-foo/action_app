@@ -22,9 +22,15 @@
 
 /* 入力欄の幅調整 */
 .if_then_text_box{
-  width: 80%;
   margin: 0 auto;
   font-size: 0.8rem;
+}
+
+/* 入力欄がはみ出さないよう調整 */
+#rule_if_1, #rule_if_2, #rule_if_3, #rule_if_4, #rule_if_5, 
+#rule_then_1, #rule_then_2, #rule_then_3, #rule_then_4, #rule_then_5 {
+  width: 100%;
+  margin-left: 0;
 }
 
 /* 保存ボタンの大きさ調整 */
