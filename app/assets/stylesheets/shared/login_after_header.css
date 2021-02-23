@@ -1,5 +1,82 @@
-/* 主にheader.cssを継承 */
-
 .action-icon {
   width: 150px;
 }
+
+/* ヘッダー全体 */
+.login_after_header {
+  background-color: #fff;
+  height: 80px;
+}
+
+/* 左のヘッダー */
+.left_menu_login_after{
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* 右のヘッダー */
+.right_menu_login_after li{
+  display: inline-block;
+}
+
+.right_menu_login_after li a{
+  font-weight: bold;
+  color: #333333;
+  padding: 20px;
+}
+
+.right_menu_login_after{
+  text-align: right;
+  padding-top: 25px;
+}
+
+/* パソコンサイズ時は非表示 */
+.login_after_header_tablet{
+  display: none;
+}
+
+/* タブレットサイズ以下の場合に表示 */
+@media (max-width: 1024px){
+  .login_after_header{
+    display: none;
+  }
+  #user_name{
+    font-size: 0.5rem;
+  }
+
+  .login_after_header_tablet {
+    display: flex;
+    background-color: #fff;
+    height: auto;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  /* 左のヘッダー */
+  .left_menu_login_after_tablet{
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  /* 右のヘッダー */
+  .right_menu_login_after_tablet li{
+    display: inline-block;
+  }
+  
+  .right_menu_login_after_tablet li a{
+    font-weight: bold;
+    font-size: 0.7rem;
+    color: #333333;
+    padding: 20px;
+  }
+  
+  .right_menu_login_after_tablet{
+    text-align: right;
+    padding-top: 20px;
+  }
+}
+
+
+
+
