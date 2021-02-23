@@ -1,13 +1,12 @@
 .registration-main {
   width: 100%;
-  min-width: 800px;
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
 }
 
 .form-wrap {
-  width: 50%;
+  width: 70%;
   background-color: white;
   padding-bottom: 70px;
   border-radius: 10px;
@@ -16,9 +15,9 @@
 
 .form-header {
   width: 100%;
-  height: 120px;
+  height: auto;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 .form-header-text {
@@ -28,7 +27,7 @@
 }
 
 .form-group {
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -41,11 +40,11 @@
 
 .form-text-wrap {
   width: 100%;
-  height: 20%;
+  height: auto;
 }
 
 .form-text {
-  /* font-size: 16px; */
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -141,7 +140,7 @@ form input[type="submit"].register-btn-action:hover {
   color: rgba(255, 0, 0, 0.652);
 }
 
-/* パスワードを15文字以上打つとマークが鮮明になるよう実装 */
+/* パスワードを10文字以上打つとマークが鮮明になるよう実装 */
 .password-logo{
     top: -20px;
     left: -20px;

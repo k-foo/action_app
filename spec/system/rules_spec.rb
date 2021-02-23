@@ -56,17 +56,17 @@ RSpec.describe 'イフゼンルールの設定', type: :system do
       log_in(@user)
       # ログイン後、イフゼンルールの設定ページへ遷移
       visit rules_path
-      # フォームにそれぞれ入力する
-      fill_in 'rule_if_1', with: '食事のイフルール、１２文字以上の設定'
-      fill_in 'rule_then_1', with: '食事のゼンルール、１２文字以上の設定'
-      fill_in 'rule_if_2', with: '睡眠のイフルール、１２文字以上の設定'
-      fill_in 'rule_then_2', with: '睡眠のゼンルール、１２文字以上の設定'
-      fill_in 'rule_if_3', with: '運動のイフルール、１２文字以上の設定'
-      fill_in 'rule_then_3', with: '運動のゼンルール、１２文字以上の設定'
-      fill_in 'rule_if_4', with: '学びのイフルール、１２文字以上の設定'
-      fill_in 'rule_then_4', with: '学びのゼンルール、１２文字以上の設定'
-      fill_in 'rule_if_5', with: 'マインドのイフルール、１２文字以上の設定'
-      fill_in 'rule_then_5', with: 'マインドのゼンルール、１２文字以上の設定'
+      # フォームにそれぞれ入力する(一部、nilで入力)
+      fill_in 'rule_if_1', with: nil
+      fill_in 'rule_then_1', with: '食事のゼンルール、21文字以上の設定 〇〇〇〇する'
+      fill_in 'rule_if_2', with: '睡眠のイフルール、21文字以上の設定 〇〇したら'
+      fill_in 'rule_then_2', with: '睡眠のゼンルール、21文字以上の設定 〇〇〇〇する'
+      fill_in 'rule_if_3', with: '運動のイフルール、21文字以上の設定 〇〇したら'
+      fill_in 'rule_then_3', with: '運動のゼンルール、21文字以上の設定 〇〇〇〇する'
+      fill_in 'rule_if_4', with: '学びのイフルール、21文字以上の設定 〇〇したら'
+      fill_in 'rule_then_4', with: '学びのゼンルール、21文字以上の設定 〇〇〇〇する'
+      fill_in 'rule_if_5', with: 'マインドのイフルール、21文字以上の設定 〇〇したら'
+      fill_in 'rule_then_5', with: 'マインドのゼンルール、21文字以上の設定 〇〇〇〇する'
       # 保存ボタンをクリックする
       click_on '保存'
       # 保存ボタンを押してもイフゼンルール設定のカウントが上がらないことを確認する

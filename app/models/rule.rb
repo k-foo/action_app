@@ -2,7 +2,7 @@ class Rule < ApplicationRecord
   belongs_to :user
   belongs_to :habit, optional: true
 
-  with_options length: { maximum: 12 }, presence: true do
+  with_options length: { maximum: 20 }, presence: true do
     validates :if_1
     validates :then_1
     validates :if_2

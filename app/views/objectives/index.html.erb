@@ -1,7 +1,7 @@
 <div class="wrapper">
 <%= render "shared/login_after_header" %>
 <div class="index_new">
-<%= link_to  new_objective_path, class: "btn pen_icon" do %> <%= image_tag "pen.png" %>新規作成<% end %>
+<%= link_to  new_objective_path, class: "btn pen_icon" do %> <%= image_tag "pen.png", size:'50x50' %>新規作成<% end %>
 </div>
 <div class="contents row">
   <% @objectives.each do |objective| %>

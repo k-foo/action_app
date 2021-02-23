@@ -1,8 +1,9 @@
-#setting_center{
-  display: flex;
-  justify-content: center;
+/* 各カテゴリーのdiv */
+.if_then_category{
+  margin-top: 1rem;
 }
 
+/* イフゼンルールの説明部分 */
 .point_description{
   border-radius: 60px;
   background: #FFBA78;
@@ -17,4 +18,17 @@
   font-weight: bold;
   font-size: larger;
   border-bottom: 1px solid #333333;
+}
+
+/* 入力欄の幅調整 */
+.if_then_text_box{
+  width: 80%;
+  margin: 0 auto;
+  font-size: 0.8rem;
+}
+
+/* 保存ボタンの大きさ調整 */
+#if_then_text_submit{
+  width: fit-content;
+  margin-top: 30px;
 }
