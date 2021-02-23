@@ -3,8 +3,7 @@
   background-color: #FFF;
   color: #333333;
   text-align: center;
-  height: 110px;
-  padding: 2vh 0;
+  height: 100px;
   position: absolute;/*絶対位置*/
   bottom: 0; /*下に固定*/
 }

@@ -33,7 +33,7 @@
 .habit1_content, .habit2_content, .habit3_content, .habit4_content, .habit5_content{
   width: 240px;
 	/* イフゼンルールを要素内に収めるため */
-  height: 295px;
+  height: 290px;
 	padding-bottom: 15px;
   border-radius: 50px;
   background: linear-gradient(145deg,  #F0EBEB,  #F0EBEB);
@@ -415,7 +415,7 @@
 
 /* イフゼンルールの文字部分 */
 .rule_text{
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	word-break : break-all;
 }
 

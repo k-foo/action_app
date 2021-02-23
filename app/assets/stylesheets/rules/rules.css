@@ -21,7 +21,7 @@
 }
 
 /* 入力欄の幅調整 */
-#if_then_text_box{
+.if_then_text_box{
   width: 80%;
   margin: 0 auto;
   font-size: 0.8rem;
