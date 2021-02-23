@@ -14,43 +14,43 @@ body {
 }
 
 /* タイトル部分 */
-
 .main_image{
   width: 100%;
-  height: 500px;
+  height: auto;
   object-fit: cover;
 }
 
 /* こんなあなたにおすすめ部分 */
 .second_title{
   text-align: center;
-  font-size: 35px;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-top: 80px;
+  margin-top: 8%;
 }
 
 .second_colum{
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 8%;
 }
 
+/* 対象者の部分 */
 .target{
   text-align: center;
-  width: 320px;
-  margin: 30px;
+  width: 20rem;
+  margin: 3%;
 }
 
 .target_text{
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.2rem;
   margin: 15px;
 }
 
-/* このアプリで出来ること */
+/* このアプリで出来ること部分 */
 .third_colum{
   width: 100%;
-  height: 400px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -59,7 +59,7 @@ body {
   display: flex;
   justify-content: space-around;
   text-align: left;
-  height: 640px;
+  height: auto;
   box-sizing: border-box;
 }
 
@@ -67,14 +67,14 @@ body {
   display: flex;
   justify-content: space-around;
   text-align: left;
-  height: 640px;
+  height: auto;
 }
 
 .possible_colum_3{
   display: flex;
   justify-content: space-around;
   text-align: left;
-  height: 640px;
+  height: auto;
 }
 
 .possible_colum_4{
@@ -82,26 +82,29 @@ body {
   display: flex;
   justify-content: space-around;
   text-align: left;
-  height: 640px;
+  height: auto;
 }
 
 .possible_text{
   font-weight: bold;
   font-size: 18px;
   margin: 15px;
-  margin-top: 25%;
+  margin-top: 2rem;
   margin-left: 0;
   border-bottom: solid #333333 1px;
 }
 
+/* 機能説明 */
 .detail_description{
   width: 40%;
   margin: 5px;
   padding: 10px;
 }
 
+/* 機能画像 */
 .demo_image{
   width: 60%;
+  height: auto;
   margin: 5px;
   padding: 10px;
 }
@@ -122,10 +125,83 @@ body {
   text-align: center;
   align-items: center;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
   border-radius: 43px;
   background: linear-gradient(145deg, #FFBA78, #FFBA78);
   box-shadow:  10px 10px 20px #b8b8bd,
   -10px -10px 20px #ffffff;
   cursor: pointer;
+}
+
+
+/* 通常時はスマホサイズ以下を非表示 */
+.possible_colum_1_smartphone{
+  display: none;
+}
+.possible_colum_2_smartphone{
+  display: none;
+}
+.possible_colum_3_smartphone{
+  display: none;
+}
+.possible_colum_4_smartphone{
+  display: none;
+}
+
+
+
+/* スマホサイズ以下の場合に表示 */
+@media (max-width: 599px){
+  /* こんなあなたにおすすめ部分 */
+  .second_title{
+    font-size: 1rem;
+    margin-top: 5%;
+  }
+  /* ターゲットの部分 */
+  .target_text{
+    font-size: 0.6rem;
+  }
+  /* ターゲット説明の部分 */
+  .target p {
+    font-size: 0.5rem;
+  }
+  /* アプリでできることの横並び部分 */
+  .possible_colum_1{
+    display: none;
+  }
+  
+  .possible_colum_2{
+    display: none;
+  }
+  
+  .possible_colum_3{
+    display: none;
+  }
+  
+  .possible_colum_4{
+    display: none;
+  }
+ .possible_colum_1_smartphone{
+   display: inline;
+ } 
+ .possible_colum_2_smartphone{
+   display: inline;
+ } 
+ .possible_colum_3_smartphone{
+   display: inline;
+ } 
+ .possible_colum_4_smartphone{
+   display: inline;
+ } 
+ .detail_description{
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  font-size: 0.8rem;
+}
+.demo_image{
+  width: 100%;
+  height: auto;
+}
 }

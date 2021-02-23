@@ -1,3 +1,8 @@
+/* 各カテゴリーのdiv */
+.if_then_category{
+  margin-top: 1rem;
+}
+
 /* イフゼンルールの説明部分 */
 .point_description{
   border-radius: 60px;
