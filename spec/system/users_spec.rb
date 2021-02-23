@@ -66,7 +66,7 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       # 新規登録ページへ移動する
       visit new_user_registration_path
       # ユーザー情報を入力する
-      fill_in 'nickname', with: '１５文字以上あるニックネームピカチュウ'
+      fill_in 'nickname', with: '10文字以上あるニックネームピカチュウ'
       fill_in 'email', with: '＠なし'
       fill_in 'password', with: 'ひらがな'
       fill_in 'password-confirmation', with: 'ひらがな'

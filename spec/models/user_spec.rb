@@ -9,9 +9,9 @@ RSpec.describe User, type: :model do
       it '全ての入力事項が、存在すれば登録できる' do
         expect(@user).to be_valid
       end
-      it 'パスワードが15文字以上半角英数字であれば登録できる' do
-        @user.password = '1234567891011121311415abc'
-        @user.password_confirmation = '1234567891011121311415abc'
+      it 'パスワードが10文字以上半角英数字であれば登録できる' do
+        @user.password = '12345678910a'
+        @user.password_confirmation = '12345678910a'
         expect(@user).to be_valid
       end
       it 'ニックネームが10字以下であれば登録できる' do
@@ -47,26 +47,26 @@ RSpec.describe User, type: :model do
       it 'パスワードが空欄だと保存できない' do
         @user.password = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードを入力してください', 'パスワードは15文字以上で入力してください', 'パスワード半角英数字で入力してください',
+        expect(@user.errors.full_messages).to include('パスワードを入力してください', 'パスワードは10文字以上で入力してください', 'パスワード半角英数字で入力してください',
                                                       'パスワード（確認用）とパスワードの入力が一致しません')
       end
-      it 'パスワード（確認含む）が15文字未満だと保存できない' do
+      it 'パスワード（確認含む）が10文字未満だと保存できない' do
         @user.password = 'ab123'
         @user.password_confirmation = 'ab123'
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードは6文字以上で入力してください', 'パスワードは15文字以上で入力してください')
+        expect(@user.errors.full_messages).to include('パスワードは10文字以上で入力してください')
       end
       it 'パスワード（確認含む）が半角英数字でないと保存できない' do
         @user.password = '123456'
         @user.password_confirmation = '123456'
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードは15文字以上で入力してください', 'パスワード半角英数字で入力してください')
+        expect(@user.errors.full_messages).to include('パスワードは10文字以上で入力してください', 'パスワード半角英数字で入力してください')
       end
       it 'パスワード（確認）が空欄だと保存できない' do
         @user.password = '123abc'
         @user.password_confirmation = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません', 'パスワードは15文字以上で入力してください')
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません', 'パスワードは10文字以上で入力してください')
       end
       it '生年月日が空欄だと保存できない' do
         @user.birthdate = ''

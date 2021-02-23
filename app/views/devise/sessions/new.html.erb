@@ -23,9 +23,10 @@
     <div class='form-text-wrap'>
       <label class="form-text">パスワード</label>
       <span class="indispensable">必須</span>
+      <%= image_tag "passcheck.png",id:"pass-logo", :size =>'30x30' %>
     </div>
     <%# app/views/devise/registrations/new.html.erbと同じようにpasswordに設定 %>
-    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
+    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"", placeholder:"10文字以上の半角英数字" %>
   </div>
   <div class='login-btn'>
     <%= f.submit "ログイン" ,class:"login-red-btn" %>

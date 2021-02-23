@@ -9,14 +9,9 @@
   bottom: 0; /*下に固定*/
 }
 
-.footer-content-head {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 .logo-white {
-  width: 20vh;
+  width: 150px;
+  height: auto;
   vertical-align: bottom;
 }
 
@@ -25,6 +20,6 @@
   justify-content: center;
 }
 
-.footer > p {
-  font-size: 14px;
+.footer p {
+  font-size: 0.5rem;
 }
