@@ -703,20 +703,6 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
   color: #9bdbf2;
 }
 
-.title {
-  font-weight: bold;
-}
-
-.title--big {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.title--big i {
-  font-style: italic;
-  font-size: 1.8em;
-}
-
 header.header {
   padding: 10px;
   border-bottom: 1px solid #D8D8D8;
@@ -805,7 +791,6 @@ header.header .user_nav ul li a {
 }
 
 .form {
-  background: url(https://dl.dropboxusercontent.com/u/5840617/DeathtoStock_Wired3.jpg);
   background-size: cover;
 }
 
@@ -1011,43 +996,6 @@ form input[type="submit"]:hover {
   color: #666;
 }
 
-.comments {
-  padding: 5px;
-  margin-top: 15px;
-}
-
-.comments a {
-  color: #57C3E9;
-}
-
-.comments a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  margin: 30px auto;
-  padding: 10px;
-  color: #D8D8D8;
-}
-
-footer p {
-  text-align: center;
-}
-
-.search-form {
-  text-align: center;
-  padding-top: 32px;
-}
-
-.search-form .search-input {
-  width: 30%;
-  margin-right: 10px;
-}
-
-.search-form .search-btn {
-  width: 10%;
-}
-
 .wrapper {
   width: 100%;
   min-height: 100vh;
@@ -1058,11 +1006,13 @@ footer p {
   /*←全て含めてmin-height:100vhに*/
 }
 
+.index_new{
+  margin-top: 20px;
+}
 .btn.pen_icon{
-  float: left;
   width: 80px;
   height: 80px;
-  margin: 20px 0px 0px 200px;
+  margin: 20%;
   text-align: center;
   padding: 2px;
 }
