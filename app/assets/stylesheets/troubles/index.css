@@ -30,6 +30,16 @@
   align-items: center;
 }
 
+/* 文字入力の部分 */
+.message_form_text{
+  width: 100%;
+}
+
+/* postボタン */
+.message_btn_text{
+  width: 100%;
+}
+
 /* タブレットサイズ以下の場合には入力フォームの横並びを解除 */
 @media (max-width: 1024px){
   .form_chat {
