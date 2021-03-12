@@ -2,7 +2,7 @@
 <header class='login_after_header'>
     <div class='left_menu_login_after'>
       <%= link_to image_tag("icon.png", class:"action-icon"), habits_path %>
-      <%= "#{current_user.nickname}さんのページ"%>
+      <%= link_to "#{current_user.nickname}さんのページ", edit_user_registration_path %>
     </div>
     <div class='right_menu_login_after'>
       <ul>

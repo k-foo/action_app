@@ -47,7 +47,7 @@ RSpec.describe User, type: :model do
       it 'パスワードが空欄だと保存できない' do
         @user.password = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードを入力してください', 'パスワードは10文字以上で入力してください', 'パスワード半角英数字で入力してください',
+        expect(@user.errors.full_messages).to include('パスワードを入力してください', 'パスワードは10文字以上で入力してください', 'パスワードは不正な値です',
                                                       'パスワード（確認用）とパスワードの入力が一致しません')
       end
       it 'パスワード（確認含む）が10文字未満だと保存できない' do
@@ -60,7 +60,7 @@ RSpec.describe User, type: :model do
         @user.password = '123456'
         @user.password_confirmation = '123456'
         @user.valid?
-        expect(@user.errors.full_messages).to include('パスワードは10文字以上で入力してください', 'パスワード半角英数字で入力してください')
+        expect(@user.errors.full_messages).to include('パスワードは10文字以上で入力してください', 'パスワードは不正な値です')
       end
       it 'パスワード（確認）が空欄だと保存できない' do
         @user.password = '123abc'

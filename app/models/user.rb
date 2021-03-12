@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  attr_accessor :current_password
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -9,15 +9,15 @@ class User < ApplicationRecord
   has_many :habits
   has_one  :rule
 
+  # 存在すること・確認用を含めて2回入力はデフォルト実装のため省略 安全性を高めるために10文字以上に設定
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
+  validates :password, format: { with: PASSWORD_REGEX }, length: { minimum: 10 }, on: :create
+  validates :password, confirmation: true, on: :create
+
   with_options presence: true do
     validates :nickname, length: { maximum: 10 }
     validates :birthdate
     # @含むこと・存在することはdeviseのデフォルト実装のため省略
     validates :email, uniqueness: true
-    # 存在すること・確認用を含めて2回入力はデフォルト実装のため省略 安全性を高めるために10文字以上に設定
-    validates :password, length: { minimum: 10 }
-    # パスワードが半角英数字（空文字NG）以外の場合には、メッセージを出す
-    PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-    validates_format_of :password, with: PASSWORD_REGEX, message: '半角英数字で入力してください'
   end
 end
