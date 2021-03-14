@@ -122,7 +122,7 @@ http://18.176.166.90/
 ### 本番環境
 - Rails 6.0.3.4
 - ruby 2.6.5
-- capistrano 3.15.0
+- capistrano 3.16.0 (2021/3/14更新)
 - unicorn 5.4.1
 - nginx1
 - MariaDB 5.5.68
