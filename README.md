@@ -34,6 +34,11 @@ ACTION
 
 http://18.176.166.90/
 
+## URL（Herokuによるデプロイ）
+
+https://action-today.herokuapp.com/
+
+
 ### Basic認証
 
 - ID: admin
